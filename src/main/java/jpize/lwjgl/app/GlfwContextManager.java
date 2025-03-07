@@ -1,7 +1,7 @@
 package jpize.lwjgl.app;
 
-import jpize.app.IContextManager;
-import jpize.io.IWindow;
+import jpize.context.IContextManager;
+import jpize.context.IWindow;
 import jpize.lwjgl.glfw.Glfw;
 import jpize.lwjgl.glfw.init.GlfwPlatform;
 import org.lwjgl.glfw.GLFW;

@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.cursor;
 
-import jpize.io.input.ICursor;
+import jpize.context.input.ICursor;
 import jpize.lwjgl.glfw.GlfwImage;
 import jpize.lwjgl.glfw.GlfwObjectLong;
 import jpize.util.Disposable;

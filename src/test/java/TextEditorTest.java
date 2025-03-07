@@ -1,7 +1,7 @@
-import jpize.app.Jpize;
-import jpize.app.JpizeApplication;
-import jpize.io.input.Key;
-import jpize.io.input.MouseBtn;
+import jpize.context.Jpize;
+import jpize.context.JpizeApplication;
+import jpize.context.input.Key;
+import jpize.context.input.MouseBtn;
 import jpize.lwjgl.app.GlfwContextBuilder;
 import jpize.lwjgl.glfw.cursor.GlfwCursor;
 import jpize.lwjgl.glfw.cursor.GlfwCursorShape;

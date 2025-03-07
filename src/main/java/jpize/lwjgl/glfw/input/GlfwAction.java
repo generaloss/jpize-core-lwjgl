@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.input;
 
-import jpize.io.input.Action;
+import jpize.context.input.Action;
 
 import static org.lwjgl.glfw.GLFW.*;
 

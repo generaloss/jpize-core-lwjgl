@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.input;
 
-import jpize.io.input.MouseBtn;
+import jpize.context.input.MouseBtn;
 
 public class GlfwMouseBtn {
 

@@ -1,6 +1,6 @@
-import jpize.app.Jpize;
-import jpize.app.JpizeApplication;
-import jpize.io.input.Key;
+import jpize.context.Jpize;
+import jpize.context.JpizeApplication;
+import jpize.context.input.Key;
 import jpize.lwjgl.app.GlfwContextBuilder;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.glenum.GlTarget;

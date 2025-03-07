@@ -1,5 +1,5 @@
-import jpize.app.Jpize;
-import jpize.app.JpizeApplication;
+import jpize.context.Jpize;
+import jpize.context.JpizeApplication;
 import jpize.lwjgl.app.GlfwContextBuilder;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.texture.Texture2D;

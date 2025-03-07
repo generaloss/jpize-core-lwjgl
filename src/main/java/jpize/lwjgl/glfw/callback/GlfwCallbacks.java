@@ -2,10 +2,10 @@ package jpize.lwjgl.glfw.callback;
 
 import jpize.lwjgl.app.GlfwContext;
 import jpize.lwjgl.app.GlfwContextManager;
-import jpize.io.callback.*;
-import jpize.io.input.Action;
-import jpize.io.input.Key;
-import jpize.io.input.MouseBtn;
+import jpize.context.callback.*;
+import jpize.context.input.Action;
+import jpize.context.input.Key;
+import jpize.context.input.MouseBtn;
 import jpize.lwjgl.glfw.input.GlfwAction;
 import jpize.lwjgl.glfw.input.GlfwMods;
 import jpize.lwjgl.glfw.input.GlfwKey;

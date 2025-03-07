@@ -1,6 +1,6 @@
-import jpize.app.Jpize;
-import jpize.app.JpizeApplication;
-import jpize.io.input.MouseBtn;
+import jpize.context.Jpize;
+import jpize.context.JpizeApplication;
+import jpize.context.input.MouseBtn;
 import jpize.lwjgl.app.GlfwContextBuilder;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.tesselation.GlScissor;

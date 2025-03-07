@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.window;
 
-import jpize.io.IWindow;
+import jpize.context.IWindow;
 import jpize.lwjgl.glfw.Glfw;
 import jpize.lwjgl.glfw.GlfwImage;
 import jpize.lwjgl.glfw.GlfwObjectLong;

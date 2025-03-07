@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.input;
 
-import jpize.io.input.*;
+import jpize.context.input.*;
 import jpize.lwjgl.glfw.Glfw;
 import jpize.lwjgl.glfw.cursor.GlfwCursor;
 import jpize.lwjgl.glfw.window.GlfwWindow;

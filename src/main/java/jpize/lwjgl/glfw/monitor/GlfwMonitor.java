@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.monitor;
 
-import jpize.io.input.ConnectEvent;
+import jpize.context.input.ConnectEvent;
 import jpize.lwjgl.glfw.GlfwConnectEvent;
 import jpize.lwjgl.glfw.GlfwObjectLong;
 import jpize.lwjgl.glfw.callback.GlfwMonitorCallback;

@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw;
 
-import jpize.io.input.ConnectEvent;
+import jpize.context.input.ConnectEvent;
 import jpize.lwjgl.glfw.callback.GlfwJoystickCallback;
 import org.lwjgl.glfw.GLFWGamepadState;
 import org.lwjgl.system.Callback;

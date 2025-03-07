@@ -1,6 +1,6 @@
 package jpize.lwjgl.app;
 
-import jpize.io.IAllocator;
+import jpize.context.input.IAllocator;
 import org.lwjgl.system.MemoryUtil;
 
 import java.nio.ByteBuffer;

@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.input;
 
-import jpize.io.input.Mods;
+import jpize.context.input.Mods;
 
 import static org.lwjgl.glfw.GLFW.*;
 

@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw.input;
 
-import jpize.io.input.CursorMode;
+import jpize.context.input.CursorMode;
 
 import static org.lwjgl.glfw.GLFW.*;
 

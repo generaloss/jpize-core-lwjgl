@@ -1,7 +1,7 @@
 package jpize.lwjgl.app;
 
-import jpize.app.Context;
-import jpize.app.Jpize;
+import jpize.context.Context;
+import jpize.context.Jpize;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.glenum.GlCompareFunc;
 import jpize.opengl.glenum.GlTarget;

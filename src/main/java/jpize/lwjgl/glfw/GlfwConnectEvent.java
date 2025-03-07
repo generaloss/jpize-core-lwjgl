@@ -1,6 +1,6 @@
 package jpize.lwjgl.glfw;
 
-import jpize.io.input.ConnectEvent;
+import jpize.context.input.ConnectEvent;
 
 import static org.lwjgl.glfw.GLFW.GLFW_CONNECTED;
 import static org.lwjgl.glfw.GLFW.GLFW_DISCONNECTED;

@@ -1,7 +1,7 @@
 package jpize.lwjgl.app;
 
-import jpize.app.Context;
-import jpize.app.Jpize;
+import jpize.context.Context;
+import jpize.context.Jpize;
 import jpize.lwjgl.glfw.window.GlfwWindow;
 import jpize.lwjgl.opengl.*;
 import org.lwjgl.opengl.GL;
