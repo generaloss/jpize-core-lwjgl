@@ -1,6 +1,6 @@
 import jpize.context.Jpize;
 import jpize.context.JpizeApplication;
-import jpize.lwjgl.app.GlfwContextBuilder;
+import jpize.lwjgl.context.GlfwContextBuilder;
 import jpize.util.font.Font;
 import jpize.opengl.texture.Texture2D;
 import jpize.util.mesh.TextureBatch;

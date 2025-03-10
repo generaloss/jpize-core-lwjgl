@@ -1,4 +1,4 @@
-package jpize.lwjgl.app;
+package jpize.lwjgl.context;
 
 import jpize.context.input.IAllocator;
 import org.lwjgl.system.MemoryUtil;

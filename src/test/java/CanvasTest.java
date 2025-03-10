@@ -1,6 +1,6 @@
 import jpize.context.Jpize;
 import jpize.context.JpizeApplication;
-import jpize.lwjgl.app.GlfwContextBuilder;
+import jpize.lwjgl.context.GlfwContextBuilder;
 import jpize.opengl.gl.Gl;
 import jpize.util.color.Color;
 import jpize.util.math.vector.Vec2i;

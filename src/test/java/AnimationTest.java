@@ -1,6 +1,6 @@
 import jpize.context.Jpize;
 import jpize.context.JpizeApplication;
-import jpize.lwjgl.app.GlfwContextBuilder;
+import jpize.lwjgl.context.GlfwContextBuilder;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.texture.Texture2D;
 import jpize.util.mesh.TextureBatch;
@@ -21,8 +21,8 @@ public class AnimationTest extends JpizeApplication {
 
         final int COLUMNS = 4;
         final int ROWS = 1;
-        final int frameWidth = texture.getWidth() / COLUMNS;
-        final int frameHeight = texture.getHeight() / ROWS;
+        final int frameWidth = (texture.getWidth() / COLUMNS);
+        final int frameHeight = (texture.getHeight() / ROWS);
 
         final TextureRegion[] regions = new TextureRegion[COLUMNS * ROWS];
         for(int i = 0; i < COLUMNS; i++)

@@ -382,11 +382,6 @@ public class GlfwWindow extends GlfwObjectLong implements IWindow {
         return (this.getMonitor() != null);
     }
 
-    @Override
-    public void toggleFullscreen() {
-        this.setFullscreen(!this.isFullscreen());
-    }
-
 
     @Override
     public void dispose() {

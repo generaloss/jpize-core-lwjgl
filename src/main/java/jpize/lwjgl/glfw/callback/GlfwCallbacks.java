@@ -1,7 +1,7 @@
 package jpize.lwjgl.glfw.callback;
 
-import jpize.lwjgl.app.GlfwContext;
-import jpize.lwjgl.app.GlfwContextManager;
+import jpize.lwjgl.context.GlfwContext;
+import jpize.lwjgl.context.GlfwContextManager;
 import jpize.context.callback.*;
 import jpize.context.input.Action;
 import jpize.context.input.Key;

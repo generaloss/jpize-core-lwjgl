@@ -1,7 +1,7 @@
 import jpize.context.Jpize;
 import jpize.context.JpizeApplication;
 import jpize.context.input.MouseBtn;
-import jpize.lwjgl.app.GlfwContextBuilder;
+import jpize.lwjgl.context.GlfwContextBuilder;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.glenum.GlTarget;
 import jpize.opengl.tesselation.GlPrimitive;

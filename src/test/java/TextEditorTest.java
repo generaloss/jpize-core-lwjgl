@@ -2,7 +2,7 @@ import jpize.context.Jpize;
 import jpize.context.JpizeApplication;
 import jpize.context.input.Key;
 import jpize.context.input.MouseBtn;
-import jpize.lwjgl.app.GlfwContextBuilder;
+import jpize.lwjgl.context.GlfwContextBuilder;
 import jpize.lwjgl.glfw.cursor.GlfwCursor;
 import jpize.lwjgl.glfw.cursor.GlfwCursorShape;
 import jpize.lwjgl.glfw.input.GlfwInput;

@@ -1,6 +1,5 @@
-package jpize.lwjgl.app;
+package jpize.lwjgl.context;
 
-import jpize.context.Context;
 import jpize.context.Jpize;
 import jpize.opengl.gl.Gl;
 import jpize.opengl.glenum.GlCompareFunc;
@@ -40,7 +39,7 @@ public class GlfwContextBuilder {
         this.height = height;
     }
 
-    public Context build() {
+    public GlfwContext build() {
         // window hints
         Glfw.defaultWindowHints();
         Glfw.windowHint(GlfwWindowHint.VISIBLE, false);
