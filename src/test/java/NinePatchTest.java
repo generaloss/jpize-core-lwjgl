@@ -17,9 +17,9 @@ public class NinePatchTest extends JpizeApplication {
         this.batch.position().add(50);
         this.batch.setRoundVertices(true);
         this.ninePatch = new NinePatch()
-            .load("/dialog.9.png")
+            .load("/button_l.9.png")
             .setStretchMode(StretchMode.STRETCH)
-            .setScale(1F)
+            .setScale(0.25F)
             .setDrawCenter(true);
     }
 
