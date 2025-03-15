@@ -272,7 +272,7 @@ public class ClothSimulation extends JpizeApplication {
 
 
     public static void main(String[] args) {
-        GlfwContextBuilder.create(1080, 720, "Cloth Simulation")
+        GlfwContextBuilder.create(1080 / 2, 2400 / 2, "Cloth Simulation")
             .samples(8)
             .build().setApp(new ClothSimulation());
 

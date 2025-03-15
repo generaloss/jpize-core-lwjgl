@@ -1,33 +1,39 @@
 package jpize.lwjgl.glfw.input;
 
 import jpize.context.input.*;
+import jpize.lwjgl.context.GlfwContext;
 import jpize.lwjgl.glfw.Glfw;
 import jpize.lwjgl.glfw.cursor.GlfwCursor;
-import jpize.lwjgl.glfw.window.GlfwWindow;
+import jpize.util.math.geometry.Recti;
 import jpize.util.math.vector.Vec2f;
+import org.lwjgl.glfw.GLFW;
 import org.lwjgl.system.MemoryUtil;
 
-import java.awt.*;
 import java.nio.DoubleBuffer;
 import java.nio.IntBuffer;
-
-import static org.lwjgl.glfw.GLFW.*;
 
 public class GlfwInput extends AbstractInput {
 
     private final long windowID;
+    private final InputMonitor inputMonitor;
 
-    public GlfwInput(GlfwWindow window) {
-        super(window);
-        this.windowID = window.getID();
+    public GlfwInput(GlfwContext context) {
+        super(context.getWindow());
+        this.windowID = context.getWindow().getID();
+        this.inputMonitor = new InputMonitor(context);
+    }
+
+    public InputMonitor getInputMonitor() {
+        return inputMonitor;
     }
 
 
     @Override
     public Action getKey(Key key) {
-        final int glfwKeyValue = GlfwKey.getGlfwValue(key);
-        final int glfwAction = glfwGetKey(windowID, glfwKeyValue);
-        return GlfwAction.byGlfwValue(glfwAction);
+        if(inputMonitor.isKeyDown(key)) return Action.DOWN;
+        if(inputMonitor.isKeyPressed(key)) return Action.PRESSED;
+        if(inputMonitor.isKeyUp(key)) return Action.UP;
+        return Action.NONE;
     }
 
     @Override
@@ -40,33 +46,85 @@ public class GlfwInput extends AbstractInput {
         return GlfwKey.getKeyName(key);
     }
 
+
     @Override
-    public Action getMouseButton(MouseBtn button) {
-        final int glfwButtonValue = GlfwMouseBtn.getGlfwValue(button);
-        final int glfwAction = glfwGetMouseButton(windowID, glfwButtonValue);
-        return GlfwAction.byGlfwValue(glfwAction);
+    public boolean isKeyDown(Key key) {
+        return inputMonitor.isKeyDown(key);
+    }
+
+    @Override
+    public boolean isKeyPressed(Key key) {
+        return inputMonitor.isKeyPressed(key);
+    }
+
+    @Override
+    public boolean isKeyUp(Key key) {
+        return inputMonitor.isKeyUp(key);
+    }
+
+
+    @Override
+    public Action getMouseButton(int index, MouseBtn button) {
+        if(index != 0)
+            return Action.NONE;
+        if(inputMonitor.isMouseButtonDown(button)) return Action.DOWN;
+        if(inputMonitor.isMouseButtonPressed(button)) return Action.PRESSED;
+        if(inputMonitor.isMouseButtonUp(button)) return Action.UP;
+        return Action.NONE;
+    }
+
+    @Override
+    public boolean isButtonDown(int index, MouseBtn button) {
+        if(index != 0)
+            return false;
+        return inputMonitor.isMouseButtonDown(button);
+    }
+
+    @Override
+    public boolean isButtonPressed(int index, MouseBtn button) {
+        if(index != 0)
+            return false;
+        return inputMonitor.isMouseButtonPressed(button);
+    }
+
+    @Override
+    public boolean isButtonUp(int index, MouseBtn button) {
+        if(index != 0)
+            return false;
+        return inputMonitor.isMouseButtonUp(button);
+    }
+
+
+    @Override
+    public float getScrollX() {
+        return inputMonitor.getScrollX();
+    }
+
+    @Override
+    public float getScrollY() {
+        return inputMonitor.getScrollY();
     }
 
 
     @Override
     public String getClipboardString() {
-        return glfwGetClipboardString(windowID);
+        return GLFW.glfwGetClipboardString(windowID);
     }
 
     @Override
     public void setClipboardString(CharSequence string) {
-        glfwSetClipboardString(windowID, string);
+        GLFW.glfwSetClipboardString(windowID, string);
     }
 
 
     public void setCursor(GlfwCursor cursor) {
         final long cursorID = (cursor == null) ? 0L : cursor.getID();
-        glfwSetCursor(windowID, cursorID);
+        GLFW.glfwSetCursor(windowID, cursorID);
     }
 
 
     public int getInputMode(GlfwInputMode mode) {
-        return glfwGetInputMode(windowID, mode.value);
+        return GLFW.glfwGetInputMode(windowID, mode.value);
     }
 
     @Override
@@ -96,12 +154,12 @@ public class GlfwInput extends AbstractInput {
 
     @Override
     public boolean isRawMouseMotionSupported() {
-        return glfwRawMouseMotionSupported();
+        return GLFW.glfwRawMouseMotionSupported();
     }
 
 
     public void setInputMode(GlfwInputMode mode, int value) {
-        glfwSetInputMode(windowID, mode.value, value);
+        GLFW.glfwSetInputMode(windowID, mode.value, value);
     }
 
     @Override
@@ -139,7 +197,7 @@ public class GlfwInput extends AbstractInput {
     public Vec2f getCursorNativePos(Vec2f dst) {
         final DoubleBuffer xBuf = MemoryUtil.memAllocDouble(1);
         final DoubleBuffer yBuf = MemoryUtil.memAllocDouble(1);
-        glfwGetCursorPos(windowID, xBuf, yBuf);
+        GLFW.glfwGetCursorPos(windowID, xBuf, yBuf);
         dst.set(xBuf.get(), yBuf.get());
         MemoryUtil.memFree(xBuf);
         MemoryUtil.memFree(yBuf);
@@ -156,7 +214,7 @@ public class GlfwInput extends AbstractInput {
     @Override
     public float getCursorX() {
         final DoubleBuffer buffer = MemoryUtil.memAllocDouble(1);
-        glfwGetCursorPos(windowID, buffer, null);
+        GLFW.glfwGetCursorPos(windowID, buffer, null);
         final float value = (float) buffer.get();
         MemoryUtil.memFree(buffer);
         return value;
@@ -165,7 +223,7 @@ public class GlfwInput extends AbstractInput {
     @Override
     public float getCursorNativeY() {
         final DoubleBuffer buffer = MemoryUtil.memAllocDouble(1);
-        glfwGetCursorPos(windowID, null, buffer);
+        GLFW.glfwGetCursorPos(windowID, null, buffer);
         final float value = (float) buffer.get();
         MemoryUtil.memFree(buffer);
         return value;
@@ -173,18 +231,18 @@ public class GlfwInput extends AbstractInput {
 
     @Override
     public void setCursorPos(double x, double y) {
-        glfwSetCursorPos(windowID, x, y);
+        GLFW.glfwSetCursorPos(windowID, x, y);
     }
 
     @Override
-    public Rectangle getPreeditCursorRectangle() {
+    public Recti getPreeditCursorRectangle() {
         final IntBuffer xBuf = MemoryUtil.memAllocInt(1);
         final IntBuffer yBuf = MemoryUtil.memAllocInt(1);
         final IntBuffer widthBuf = MemoryUtil.memAllocInt(1);
         final IntBuffer heightBuf = MemoryUtil.memAllocInt(1);
 
-        glfwGetPreeditCursorRectangle(windowID, xBuf, yBuf, widthBuf, heightBuf);
-        final Rectangle value = new Rectangle(xBuf.get(), yBuf.get(), widthBuf.get(), heightBuf.get());
+        GLFW.glfwGetPreeditCursorRectangle(windowID, xBuf, yBuf, widthBuf, heightBuf);
+        final Recti value = new Recti(xBuf.get(), yBuf.get(), widthBuf.get(), heightBuf.get());
 
         MemoryUtil.memFree(xBuf);
         MemoryUtil.memFree(yBuf);
@@ -195,17 +253,17 @@ public class GlfwInput extends AbstractInput {
 
     @Override
     public void setPreeditCursorRectangle(int x, int y, int width, int height) {
-        glfwSetPreeditCursorRectangle(windowID, x, y, width, height);
+        GLFW.glfwSetPreeditCursorRectangle(windowID, x, y, width, height);
     }
 
     @Override
     public IntBuffer getPreeditCandidate(int index) {
-        return glfwGetPreeditCandidate(windowID, index);
+        return GLFW.glfwGetPreeditCandidate(windowID, index);
     }
 
     @Override
     public void resetPreeditText() {
-        glfwResetPreeditText(windowID);
+        GLFW.glfwResetPreeditText(windowID);
     }
 
 }

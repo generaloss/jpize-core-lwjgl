@@ -2,6 +2,10 @@ package jpize.lwjgl.context;
 
 import jpize.context.Context;
 import jpize.context.Jpize;
+import jpize.context.callback.AbstractCallbacks;
+import jpize.context.input.AbstractInput;
+import jpize.lwjgl.glfw.callback.GlfwCallbacks;
+import jpize.lwjgl.glfw.input.GlfwInput;
 import jpize.lwjgl.glfw.window.GlfwWindow;
 import jpize.lwjgl.opengl.*;
 import org.lwjgl.opengl.GL;
@@ -9,13 +13,36 @@ import org.lwjgl.opengl.GLCapabilities;
 
 public class GlfwContext extends Context {
 
+    private final GlfwWindow window;
+    private final GlfwInput input;
+    private final GlfwCallbacks callbacks;
     private final GLCapabilities glCapabilities;
 
     public GlfwContext(GlfwWindow window) {
-        super(window);
+        this.window = window;
+        this.callbacks = new GlfwCallbacks(window);
+        this.input = new GlfwInput(this); // uses callbacks in constructor
+
         this.makeCurrent();
         this.glCapabilities = GL.createCapabilities();
+
         GlfwContextManager.instance().contextToInit(this);
+        callbacks.addRender(window::swapBuffers);
+    }
+
+    @Override
+    public GlfwWindow getWindow() {
+        return window;
+    }
+
+    @Override
+    public AbstractInput getInput() {
+        return input;
+    }
+
+    @Override
+    public AbstractCallbacks getCallbacks() {
+        return callbacks;
     }
 
     public GLCapabilities getGLCapabilities() {
@@ -26,6 +53,7 @@ public class GlfwContext extends Context {
     protected void init() {
         this.makeCurrent();
         super.init();
+        window.show();
     }
 
     @Override
@@ -37,11 +65,16 @@ public class GlfwContext extends Context {
     @Override
     protected void loop() {
         this.makeCurrent();
+        if(window.shouldClose())
+            super.close();
         super.loop();
+        input.getInputMonitor().clear();
     }
 
     @Override
     protected void exit() {
+        // (context is current (calls in loop))
+        window.hide();
         GlfwContextManager.instance().unregister(this);
         super.exit();
     }
@@ -50,9 +83,9 @@ public class GlfwContext extends Context {
     public void makeCurrent() {
         GlfwContextManager.instance().makeContextCurrent(window);
         Jpize.context = this;
-        Jpize.window = super.window;
-        Jpize.input = super.window.getInput();
-        Jpize.callbacks = super.window.getCallbacks();
+        Jpize.window = window;
+        Jpize.input = input;
+        Jpize.callbacks = callbacks;
         Jpize.GL11 = GL11;
         Jpize.GL12 = GL12;
         Jpize.GL13 = GL13;

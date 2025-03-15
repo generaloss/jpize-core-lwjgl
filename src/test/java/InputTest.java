@@ -26,9 +26,12 @@ public class InputTest extends JpizeApplication {
         batch.setup();
 
         final StringJoiner keys = new StringJoiner(", ");
+
+        System.out.println(Jpize.input.getKey(Key.A));
+
         for(Key key: Key.values())
             if(key.pressed())
-                keys.add(key.getName());
+                keys.add(key.toString());
         font.drawText(batch, "Keys: " + keys, 100, 100);
 
         final StringJoiner buttons = new StringJoiner(", ");

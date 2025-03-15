@@ -4,9 +4,8 @@ import jpize.context.IWindow;
 import jpize.lwjgl.glfw.Glfw;
 import jpize.lwjgl.glfw.GlfwImage;
 import jpize.lwjgl.glfw.GlfwObjectLong;
-import jpize.lwjgl.glfw.callback.GlfwCallbacks;
-import jpize.lwjgl.glfw.input.GlfwInput;
 import jpize.lwjgl.glfw.monitor.GlfwMonitor;
+import jpize.util.Insetsi;
 import jpize.util.pixmap.PixmapRGBA;
 import jpize.util.math.vector.Vec2f;
 import jpize.util.math.vector.Vec2i;
@@ -14,7 +13,6 @@ import jpize.util.res.Resource;
 import org.lwjgl.glfw.*;
 import org.lwjgl.system.MemoryUtil;
 
-import java.awt.*;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import java.util.Collection;
@@ -25,17 +23,12 @@ import static org.lwjgl.glfw.GLFW.*;
 
 public class GlfwWindow extends GlfwObjectLong implements IWindow {
 
-    private final GlfwInput input;
-    private final GlfwCallbacks callbacks;
-
     public GlfwWindow(int width, int height, String title, GlfwMonitor monitor, GlfwWindow share) {
         super(glfwCreateWindow(
             width, height, title,
             (monitor == null) ? 0L : monitor.getID(),
             (share == null) ? 0L : share.getID()
         ));
-        this.callbacks = new GlfwCallbacks(this);
-        this.input = new GlfwInput(this);
         registerContext(this);
     }
 
@@ -58,18 +51,6 @@ public class GlfwWindow extends GlfwObjectLong implements IWindow {
     public GlfwWindow(String title, int width, int height) {
         this(title, width, height, null);
     }
-
-
-    @Override
-    public GlfwInput getInput() {
-        return input;
-    }
-
-    @Override
-    public GlfwCallbacks getCallbacks() {
-        return callbacks;
-    }
-
 
     @Override
     public void makeContextCurrent() {
@@ -259,14 +240,14 @@ public class GlfwWindow extends GlfwObjectLong implements IWindow {
 
 
     @Override
-    public Insets getFrameSize() {
+    public Insetsi getFrameSize() {
         final IntBuffer leftBuf = MemoryUtil.memAllocInt(1);
         final IntBuffer topBuf = MemoryUtil.memAllocInt(1);
         final IntBuffer rightBuf = MemoryUtil.memAllocInt(1);
         final IntBuffer bottomBuf = MemoryUtil.memAllocInt(1);
 
         glfwGetWindowFrameSize(ID, leftBuf, topBuf, rightBuf, bottomBuf);
-        final Insets value = new Insets(topBuf.get(), leftBuf.get(), bottomBuf.get(), rightBuf.get());
+        final Insetsi value = new Insetsi(topBuf.get(), leftBuf.get(), bottomBuf.get(), rightBuf.get());
 
         MemoryUtil.memFree(leftBuf);
         MemoryUtil.memFree(topBuf);
