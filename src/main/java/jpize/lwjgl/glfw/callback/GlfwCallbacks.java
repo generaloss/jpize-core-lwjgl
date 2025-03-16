@@ -181,7 +181,7 @@ public class GlfwCallbacks extends AbstractCallbacks {
             final MouseBtn button = GlfwMouseBtn.byGlfwValue(rawButton);
             final Action action = ((rawAction == GLFW_PRESS) ? Action.DOWN : Action.UP);
             final GlfwMods mods = new GlfwMods(rawMods);
-            super.invokeMouseButton(button, action, mods);
+            super.invokeMouseButton(0, button, action, mods);
         });
     }
 

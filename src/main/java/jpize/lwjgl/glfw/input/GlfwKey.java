@@ -1,12 +1,8 @@
 package jpize.lwjgl.glfw.input;
 
 import jpize.context.input.Key;
-import jpize.util.Utils;
 import org.lwjgl.glfw.GLFW;
-
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -146,16 +142,10 @@ public class GlfwKey {
         return GLFW_KEY_VALUES[key.ordinal()];
     }
 
-    private static final Map<Key, Integer> SCANCODE_BY_KEY = Utils.make(new HashMap<>(), map -> {
-        for(Key key: Key.values()) {
-            final int glfwKeyValue = getGlfwValue(key);
-            final int scancode = GLFW.glfwGetKeyScancode(glfwKeyValue);
-            map.put(key, scancode);
-        }
-    });
 
     public static int getScancode(Key key) {
-        return SCANCODE_BY_KEY.get(key);
+        final int glfwKeyValue = getGlfwValue(key);
+        return GLFW.glfwGetKeyScancode(glfwKeyValue);
     }
 
     public static String getKeyName(Key key) {

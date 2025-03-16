@@ -1,5 +1,6 @@
 package jpize.lwjgl.glfw.input;
 
+import jpize.context.Jpize;
 import jpize.context.input.*;
 import jpize.lwjgl.context.GlfwContext;
 import jpize.lwjgl.glfw.Glfw;
@@ -15,26 +16,12 @@ import java.nio.IntBuffer;
 public class GlfwInput extends AbstractInput {
 
     private final long windowID;
-    private final InputMonitor inputMonitor;
 
     public GlfwInput(GlfwContext context) {
-        super(context.getWindow());
+        super(context);
         this.windowID = context.getWindow().getID();
-        this.inputMonitor = new InputMonitor(context);
     }
 
-    public InputMonitor getInputMonitor() {
-        return inputMonitor;
-    }
-
-
-    @Override
-    public Action getKey(Key key) {
-        if(inputMonitor.isKeyDown(key)) return Action.DOWN;
-        if(inputMonitor.isKeyPressed(key)) return Action.PRESSED;
-        if(inputMonitor.isKeyUp(key)) return Action.UP;
-        return Action.NONE;
-    }
 
     @Override
     public int getKeyScancode(Key key) {
@@ -46,63 +33,9 @@ public class GlfwInput extends AbstractInput {
         return GlfwKey.getKeyName(key);
     }
 
-
     @Override
-    public boolean isKeyDown(Key key) {
-        return inputMonitor.isKeyDown(key);
-    }
-
-    @Override
-    public boolean isKeyPressed(Key key) {
-        return inputMonitor.isKeyPressed(key);
-    }
-
-    @Override
-    public boolean isKeyUp(Key key) {
-        return inputMonitor.isKeyUp(key);
-    }
-
-
-    @Override
-    public Action getMouseButton(int index, MouseBtn button) {
-        if(index != 0)
-            return Action.NONE;
-        if(inputMonitor.isMouseButtonDown(button)) return Action.DOWN;
-        if(inputMonitor.isMouseButtonPressed(button)) return Action.PRESSED;
-        if(inputMonitor.isMouseButtonUp(button)) return Action.UP;
-        return Action.NONE;
-    }
-
-    @Override
-    public boolean isButtonDown(int index, MouseBtn button) {
-        if(index != 0)
-            return false;
-        return inputMonitor.isMouseButtonDown(button);
-    }
-
-    @Override
-    public boolean isButtonPressed(int index, MouseBtn button) {
-        if(index != 0)
-            return false;
-        return inputMonitor.isMouseButtonPressed(button);
-    }
-
-    @Override
-    public boolean isButtonUp(int index, MouseBtn button) {
-        if(index != 0)
-            return false;
-        return inputMonitor.isMouseButtonUp(button);
-    }
-
-
-    @Override
-    public float getScrollX() {
-        return inputMonitor.getScrollX();
-    }
-
-    @Override
-    public float getScrollY() {
-        return inputMonitor.getScrollY();
+    public int getMaxMousesCount() {
+        return 1;
     }
 
 
@@ -194,7 +127,9 @@ public class GlfwInput extends AbstractInput {
 
 
     @Override
-    public Vec2f getCursorNativePos(Vec2f dst) {
+    public Vec2f getCursorNativePos(Vec2f dst, int mouseIndex) {
+        if(mouseIndex != 0)
+            return dst.set(0F, Jpize.getHeight());
         final DoubleBuffer xBuf = MemoryUtil.memAllocDouble(1);
         final DoubleBuffer yBuf = MemoryUtil.memAllocDouble(1);
         GLFW.glfwGetCursorPos(windowID, xBuf, yBuf);
@@ -205,14 +140,18 @@ public class GlfwInput extends AbstractInput {
     }
 
     @Override
-    public Vec2f getCursorPos(Vec2f dst) {
+    public Vec2f getCursorPos(Vec2f dst, int mouseIndex) {
+        if(mouseIndex != 0)
+            return dst.set(0F);
         this.getCursorNativePos(dst);
-        dst.y = (window.getHeight() - dst.y);
+        dst.y = (Jpize.getHeight() - dst.y);
         return dst;
     }
 
     @Override
-    public float getCursorX() {
+    public float getCursorX(int mouseIndex) {
+        if(mouseIndex != 0)
+            return 0F;
         final DoubleBuffer buffer = MemoryUtil.memAllocDouble(1);
         GLFW.glfwGetCursorPos(windowID, buffer, null);
         final float value = (float) buffer.get();
@@ -221,7 +160,9 @@ public class GlfwInput extends AbstractInput {
     }
 
     @Override
-    public float getCursorNativeY() {
+    public float getCursorNativeY(int mouseIndex) {
+        if(mouseIndex != 0)
+            return Jpize.getHeight();
         final DoubleBuffer buffer = MemoryUtil.memAllocDouble(1);
         GLFW.glfwGetCursorPos(windowID, null, buffer);
         final float value = (float) buffer.get();
