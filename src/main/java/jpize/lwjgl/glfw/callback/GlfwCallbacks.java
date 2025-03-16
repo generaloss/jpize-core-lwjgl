@@ -156,7 +156,7 @@ public class GlfwCallbacks extends AbstractCallbacks {
         if(callbackCursorPos != null) return;
         callbackCursorPos = glfwSetCursorPosCallback(windowID, (windowID, x, y) -> {
             this.makeContextCurrent();
-            super.invokeCursorPos((float) x, (float) y);
+            super.invokeCursorPos(0, (float) x, (float) y);
         });
     }
 
@@ -167,7 +167,7 @@ public class GlfwCallbacks extends AbstractCallbacks {
         if(callbackCursorEnter != null) return;
         callbackCursorEnter = glfwSetCursorEnterCallback(windowID, (windowID, entered) -> {
             this.makeContextCurrent();
-            super.invokeCursorEnter(entered);
+            super.invokeCursorEnter(0, entered);
         });
     }
 
