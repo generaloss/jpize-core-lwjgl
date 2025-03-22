@@ -50,20 +50,20 @@ public class GlfwContext extends Context {
     }
 
     @Override
-    protected void init() {
+    public void init() {
         this.makeCurrent();
         super.init();
         window.show();
     }
 
     @Override
-    protected void resize(int width, int height) {
+    public void resize(int width, int height) {
         this.makeCurrent();
         super.resize(width, height);
     }
 
     @Override
-    protected void loop() {
+    public void loop() {
         this.makeCurrent();
         if(window.shouldClose())
             super.close();
@@ -72,7 +72,7 @@ public class GlfwContext extends Context {
     }
 
     @Override
-    protected void exit() {
+    public void exit() {
         // (context is current (calls in loop))
         window.hide();
         GlfwContextManager.instance().unregister(this);

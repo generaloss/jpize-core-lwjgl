@@ -24,9 +24,7 @@ public class GlfwCallbacks extends AbstractCallbacks {
     private Callback callbackScroll, callbackIMEStatus, callbackCharMods, callbackKey;
     private Callback callbackChar, callbackPreedit, callbackPreeditCandidate, callbackDrop;
     private Callback callbackClose, callbackContentScale, callbackFocus, callbackIconify;
-    private Callback callbackMaximize, callbackPos, callbackRefresh, callbackSize, callbackFramebufferSize;
-
-
+    private Callback callbackMaximize, callbackPos, callbackRefresh, callbackWindowResize, callbackFramebufferResize;
 
     public GlfwCallbacks(GlfwWindow window) {
         this.windowID = window.getID();
@@ -128,24 +126,24 @@ public class GlfwCallbacks extends AbstractCallbacks {
     }
 
     @Override
-    public void addWindowSize(WindowSizeCallback callback) {
-        super.addWindowSize(callback);
+    public void addWindowResize(ResizeCallback callback) {
+        super.addResize(callback);
 
-        if(callbackSize != null) return;
-        callbackSize = glfwSetWindowSizeCallback(windowID, (ID, width, height) -> {
+        if(callbackWindowResize != null) return;
+        callbackWindowResize = glfwSetWindowSizeCallback(windowID, (ID, width, height) -> {
             this.makeContextCurrent();
-            super.invokeWindowSize(width, height);
+            super.invokeResize(width, height);
         });
     }
 
     @Override
-    public void addFramebufferSize(FramebufferSizeCallback callback) {
-        super.addFramebufferSize(callback);
+    public void addResize(ResizeCallback callback) {
+        super.addResize(callback);
 
-        if(callbackFramebufferSize != null) return;
-        callbackFramebufferSize = glfwSetFramebufferSizeCallback(windowID, (ID, width, height) -> {
+        if(callbackFramebufferResize != null) return;
+        callbackFramebufferResize = glfwSetFramebufferSizeCallback(windowID, (ID, width, height) -> {
             this.makeContextCurrent();
-            super.invokeFramebufferSize(width, height);
+            super.invokeResize(width, height);
         });
     }
 
