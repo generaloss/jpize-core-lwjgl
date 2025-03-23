@@ -2,6 +2,8 @@ package jpize.lwjgl.opengl;
 
 import jpize.opengl.gl.GLI43;
 import org.lwjgl.opengl.GL43;
+import org.lwjgl.system.MemoryUtil;
+
 import java.nio.*;
 
 public class LwjglGL43 extends LwjglGL42 implements GLI43 {
@@ -83,7 +85,10 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
 
     @Override
     public void glDebugMessageCallback(GLDebugMessageCallback callback, long userParam) {
-        GL43.glDebugMessageCallback(callback::invoke, userParam);
+        GL43.glDebugMessageCallback((source, type, id, severity, length, messagePoniter, c_userParam) -> {
+            final String message = MemoryUtil.memUTF8(messagePoniter);
+            callback.invoke(source, type, id, severity, length, message, c_userParam);
+        }, userParam);
     }
 
     @Override
