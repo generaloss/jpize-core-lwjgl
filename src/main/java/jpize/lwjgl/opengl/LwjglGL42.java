@@ -7,11 +7,6 @@ import java.nio.*;
 public class LwjglGL42 extends LwjglGL41 implements GLI42 {
 
     @Override
-    public void nglGetActiveAtomicCounterBufferiv(int program, int bufferIndex, int pname, long params) {
-        GL42.nglGetActiveAtomicCounterBufferiv(program, bufferIndex, pname, params);
-    }
-
-    @Override
     public void glGetActiveAtomicCounterBufferiv(int program, int bufferIndex, int pname, IntBuffer params) {
         GL42.glGetActiveAtomicCounterBufferiv(program, bufferIndex, pname, params);
     }
@@ -52,11 +47,6 @@ public class LwjglGL42 extends LwjglGL41 implements GLI42 {
     }
 
     @Override
-    public void nglDrawElementsInstancedBaseInstance(int mode, int count, int type, long indices, int primcount, int baseinstance) {
-        GL42.nglDrawElementsInstancedBaseInstance(mode, count, type, indices, primcount, baseinstance);
-    }
-
-    @Override
     public void glDrawElementsInstancedBaseInstance(int mode, int count, int type, long indices, int primcount, int baseinstance) {
         GL42.glDrawElementsInstancedBaseInstance(mode, count, type, indices, primcount, baseinstance);
     }
@@ -79,11 +69,6 @@ public class LwjglGL42 extends LwjglGL41 implements GLI42 {
     @Override
     public void glDrawElementsInstancedBaseInstance(int mode, IntBuffer indices, int primcount, int baseinstance) {
         GL42.glDrawElementsInstancedBaseInstance(mode, indices, primcount, baseinstance);
-    }
-
-    @Override
-    public void nglDrawElementsInstancedBaseVertexBaseInstance(int mode, int count, int type, long indices, int primcount, int basevertex, int baseinstance) {
-        GL42.nglDrawElementsInstancedBaseVertexBaseInstance(mode, count, type, indices, primcount, basevertex, baseinstance);
     }
 
     @Override
@@ -119,11 +104,6 @@ public class LwjglGL42 extends LwjglGL41 implements GLI42 {
     @Override
     public void glMemoryBarrier(int barriers) {
         GL42.glMemoryBarrier(barriers);
-    }
-
-    @Override
-    public void nglGetInternalformativ(int target, int internalformat, int pname, int bufSize, long params) {
-        GL42.nglGetInternalformativ(target, internalformat, pname, bufSize, params);
     }
 
     @Override

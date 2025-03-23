@@ -12,11 +12,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     }
 
     @Override
-    public void nglDeleteBuffers(int n, long buffers) {
-        GL15.nglDeleteBuffers(n, buffers);
-    }
-
-    @Override
     public void glDeleteBuffers(IntBuffer buffers) {
         GL15.glDeleteBuffers(buffers);
     }
@@ -24,11 +19,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     @Override
     public void glDeleteBuffers(int buffer) {
         GL15.glDeleteBuffers(buffer);
-    }
-
-    @Override
-    public void nglGenBuffers(int n, long buffers) {
-        GL15.nglGenBuffers(n, buffers);
     }
 
     @Override
@@ -44,11 +34,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     @Override
     public boolean glIsBuffer(int buffer) {
         return GL15.glIsBuffer(buffer);
-    }
-
-    @Override
-    public void nglBufferData(int target, long size, long data, int usage) {
-        GL15.nglBufferData(target, size, data, usage);
     }
 
     @Override
@@ -87,11 +72,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     }
 
     @Override
-    public void nglBufferSubData(int target, long offset, long size, long data) {
-        GL15.nglBufferSubData(target, offset, size, data);
-    }
-
-    @Override
     public void glBufferSubData(int target, long offset, ByteBuffer data) {
         GL15.glBufferSubData(target, offset, data);
     }
@@ -119,11 +99,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     @Override
     public void glBufferSubData(int target, long offset, DoubleBuffer data) {
         GL15.glBufferSubData(target, offset, data);
-    }
-
-    @Override
-    public void nglGetBufferSubData(int target, long offset, long size, long data) {
-        GL15.nglGetBufferSubData(target, offset, size, data);
     }
 
     @Override
@@ -157,11 +132,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     }
 
     @Override
-    public long nglMapBuffer(int target, int access) {
-        return GL15.nglMapBuffer(target, access);
-    }
-
-    @Override
     public ByteBuffer glMapBuffer(int target, int access) {
         return GL15.glMapBuffer(target, access);
     }
@@ -182,11 +152,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     }
 
     @Override
-    public void nglGetBufferParameteriv(int target, int pname, long params) {
-        GL15.nglGetBufferParameteriv(target, pname, params);
-    }
-
-    @Override
     public void glGetBufferParameteriv(int target, int pname, IntBuffer params) {
         GL15.glGetBufferParameteriv(target, pname, params);
     }
@@ -197,18 +162,8 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     }
 
     @Override
-    public void nglGetBufferPointerv(int target, int pname, long params) {
-        GL15.nglGetBufferPointerv(target, pname, params);
-    }
-
-    @Override
     public long glGetBufferPointer(int target, int pname) {
         return GL15.glGetBufferPointer(target, pname);
-    }
-
-    @Override
-    public void nglGenQueries(int n, long ids) {
-        GL15.nglGenQueries(n, ids);
     }
 
     @Override
@@ -219,11 +174,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     @Override
     public int glGenQueries() {
         return GL15.glGenQueries();
-    }
-
-    @Override
-    public void nglDeleteQueries(int n, long ids) {
-        GL15.nglDeleteQueries(n, ids);
     }
 
     @Override
@@ -252,11 +202,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     }
 
     @Override
-    public void nglGetQueryiv(int target, int pname, long params) {
-        GL15.nglGetQueryiv(target, pname, params);
-    }
-
-    @Override
     public void glGetQueryiv(int target, int pname, IntBuffer params) {
         GL15.glGetQueryiv(target, pname, params);
     }
@@ -264,11 +209,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     @Override
     public int glGetQueryi(int target, int pname) {
         return GL15.glGetQueryi(target, pname);
-    }
-
-    @Override
-    public void nglGetQueryObjectiv(int id, int pname, long params) {
-        GL15.nglGetQueryObjectiv(id, pname, params);
     }
 
     @Override
@@ -284,11 +224,6 @@ public class LwjglGL15 extends LwjglGL14 implements GLI15 {
     @Override
     public int glGetQueryObjecti(int id, int pname) {
         return GL15.glGetQueryObjecti(id, pname);
-    }
-
-    @Override
-    public void nglGetQueryObjectuiv(int id, int pname, long params) {
-        GL15.nglGetQueryObjectuiv(id, pname, params);
     }
 
     @Override

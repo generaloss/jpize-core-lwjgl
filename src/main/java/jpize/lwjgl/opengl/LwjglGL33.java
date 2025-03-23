@@ -7,11 +7,6 @@ import java.nio.*;
 public class LwjglGL33 extends LwjglGL32 implements GLI33 {
 
     @Override
-    public void nglBindFragDataLocationIndexed(int program, int colorNumber, int index, long name) {
-        GL33.nglBindFragDataLocationIndexed(program, colorNumber, index, name);
-    }
-
-    @Override
     public void glBindFragDataLocationIndexed(int program, int colorNumber, int index, ByteBuffer name) {
         GL33.glBindFragDataLocationIndexed(program, colorNumber, index, name);
     }
@@ -19,11 +14,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     @Override
     public void glBindFragDataLocationIndexed(int program, int colorNumber, int index, CharSequence name) {
         GL33.glBindFragDataLocationIndexed(program, colorNumber, index, name);
-    }
-
-    @Override
-    public int nglGetFragDataIndex(int program, long name) {
-        return GL33.nglGetFragDataIndex(program, name);
     }
 
     @Override
@@ -37,11 +27,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglGenSamplers(int count, long samplers) {
-        GL33.nglGenSamplers(count, samplers);
-    }
-
-    @Override
     public void glGenSamplers(IntBuffer samplers) {
         GL33.glGenSamplers(samplers);
     }
@@ -49,11 +34,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     @Override
     public int glGenSamplers() {
         return GL33.glGenSamplers();
-    }
-
-    @Override
-    public void nglDeleteSamplers(int count, long samplers) {
-        GL33.nglDeleteSamplers(count, samplers);
     }
 
     @Override
@@ -87,18 +67,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglSamplerParameteriv(int sampler, int pname, long params) {
-        GL33.nglSamplerParameteriv(sampler, pname, params);
-    }
-
-    @Override
     public void glSamplerParameteriv(int sampler, int pname, IntBuffer params) {
         GL33.glSamplerParameteriv(sampler, pname, params);
-    }
-
-    @Override
-    public void nglSamplerParameterfv(int sampler, int pname, long params) {
-        GL33.nglSamplerParameterfv(sampler, pname, params);
     }
 
     @Override
@@ -107,28 +77,13 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglSamplerParameterIiv(int sampler, int pname, long params) {
-        GL33.nglSamplerParameterIiv(sampler, pname, params);
-    }
-
-    @Override
     public void glSamplerParameterIiv(int sampler, int pname, IntBuffer params) {
         GL33.glSamplerParameterIiv(sampler, pname, params);
     }
 
     @Override
-    public void nglSamplerParameterIuiv(int sampler, int pname, long params) {
-        GL33.nglSamplerParameterIuiv(sampler, pname, params);
-    }
-
-    @Override
     public void glSamplerParameterIuiv(int sampler, int pname, IntBuffer params) {
         GL33.glSamplerParameterIuiv(sampler, pname, params);
-    }
-
-    @Override
-    public void nglGetSamplerParameteriv(int sampler, int pname, long params) {
-        GL33.nglGetSamplerParameteriv(sampler, pname, params);
     }
 
     @Override
@@ -142,11 +97,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglGetSamplerParameterfv(int sampler, int pname, long params) {
-        GL33.nglGetSamplerParameterfv(sampler, pname, params);
-    }
-
-    @Override
     public void glGetSamplerParameterfv(int sampler, int pname, FloatBuffer params) {
         GL33.glGetSamplerParameterfv(sampler, pname, params);
     }
@@ -157,11 +107,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglGetSamplerParameterIiv(int sampler, int pname, long params) {
-        GL33.nglGetSamplerParameterIiv(sampler, pname, params);
-    }
-
-    @Override
     public void glGetSamplerParameterIiv(int sampler, int pname, IntBuffer params) {
         GL33.glGetSamplerParameterIiv(sampler, pname, params);
     }
@@ -169,11 +114,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     @Override
     public int glGetSamplerParameterIi(int sampler, int pname) {
         return GL33.glGetSamplerParameterIi(sampler, pname);
-    }
-
-    @Override
-    public void nglGetSamplerParameterIuiv(int sampler, int pname, long params) {
-        GL33.nglGetSamplerParameterIuiv(sampler, pname, params);
     }
 
     @Override
@@ -192,11 +132,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglGetQueryObjecti64v(int id, int pname, long params) {
-        GL33.nglGetQueryObjecti64v(id, pname, params);
-    }
-
-    @Override
     public void glGetQueryObjecti64v(int id, int pname, LongBuffer params) {
         GL33.glGetQueryObjecti64v(id, pname, params);
     }
@@ -209,11 +144,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     @Override
     public long glGetQueryObjecti64(int id, int pname) {
         return GL33.glGetQueryObjecti64(id, pname);
-    }
-
-    @Override
-    public void nglGetQueryObjectui64v(int id, int pname, long params) {
-        GL33.nglGetQueryObjectui64v(id, pname, params);
     }
 
     @Override
@@ -252,28 +182,13 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglVertexP2uiv(int var0, long var1) {
-        GL33.nglVertexP2uiv(var0, var1);
-    }
-
-    @Override
     public void glVertexP2uiv(int type, IntBuffer value) {
         GL33.glVertexP2uiv(type, value);
     }
 
     @Override
-    public void nglVertexP3uiv(int var0, long var1) {
-        GL33.nglVertexP3uiv(var0, var1);
-    }
-
-    @Override
     public void glVertexP3uiv(int type, IntBuffer value) {
         GL33.glVertexP3uiv(type, value);
-    }
-
-    @Override
-    public void nglVertexP4uiv(int var0, long var1) {
-        GL33.nglVertexP4uiv(var0, var1);
     }
 
     @Override
@@ -302,18 +217,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglTexCoordP1uiv(int var0, long var1) {
-        GL33.nglTexCoordP1uiv(var0, var1);
-    }
-
-    @Override
     public void glTexCoordP1uiv(int type, IntBuffer coords) {
         GL33.glTexCoordP1uiv(type, coords);
-    }
-
-    @Override
-    public void nglTexCoordP2uiv(int var0, long var1) {
-        GL33.nglTexCoordP2uiv(var0, var1);
     }
 
     @Override
@@ -322,18 +227,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglTexCoordP3uiv(int var0, long var1) {
-        GL33.nglTexCoordP3uiv(var0, var1);
-    }
-
-    @Override
     public void glTexCoordP3uiv(int type, IntBuffer coords) {
         GL33.glTexCoordP3uiv(type, coords);
-    }
-
-    @Override
-    public void nglTexCoordP4uiv(int var0, long var1) {
-        GL33.nglTexCoordP4uiv(var0, var1);
     }
 
     @Override
@@ -362,18 +257,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglMultiTexCoordP1uiv(int var0, int var1, long var2) {
-        GL33.nglMultiTexCoordP1uiv(var0, var1, var2);
-    }
-
-    @Override
     public void glMultiTexCoordP1uiv(int texture, int type, IntBuffer coords) {
         GL33.glMultiTexCoordP1uiv(texture, type, coords);
-    }
-
-    @Override
-    public void nglMultiTexCoordP2uiv(int var0, int var1, long var2) {
-        GL33.nglMultiTexCoordP2uiv(var0, var1, var2);
     }
 
     @Override
@@ -382,18 +267,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglMultiTexCoordP3uiv(int var0, int var1, long var2) {
-        GL33.nglMultiTexCoordP3uiv(var0, var1, var2);
-    }
-
-    @Override
     public void glMultiTexCoordP3uiv(int texture, int type, IntBuffer coords) {
         GL33.glMultiTexCoordP3uiv(texture, type, coords);
-    }
-
-    @Override
-    public void nglMultiTexCoordP4uiv(int var0, int var1, long var2) {
-        GL33.nglMultiTexCoordP4uiv(var0, var1, var2);
     }
 
     @Override
@@ -404,11 +279,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     @Override
     public void glNormalP3ui(int var0, int var1) {
         GL33.glNormalP3ui(var0, var1);
-    }
-
-    @Override
-    public void nglNormalP3uiv(int var0, long var1) {
-        GL33.nglNormalP3uiv(var0, var1);
     }
 
     @Override
@@ -427,18 +297,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglColorP3uiv(int var0, long var1) {
-        GL33.nglColorP3uiv(var0, var1);
-    }
-
-    @Override
     public void glColorP3uiv(int type, IntBuffer color) {
         GL33.glColorP3uiv(type, color);
-    }
-
-    @Override
-    public void nglColorP4uiv(int var0, long var1) {
-        GL33.nglColorP4uiv(var0, var1);
     }
 
     @Override
@@ -449,11 +309,6 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     @Override
     public void glSecondaryColorP3ui(int var0, int var1) {
         GL33.glSecondaryColorP3ui(var0, var1);
-    }
-
-    @Override
-    public void nglSecondaryColorP3uiv(int var0, long var1) {
-        GL33.nglSecondaryColorP3uiv(var0, var1);
     }
 
     @Override
@@ -482,18 +337,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglVertexAttribP1uiv(int index, int type, boolean normalized, long value) {
-        GL33.nglVertexAttribP1uiv(index, type, normalized, value);
-    }
-
-    @Override
     public void glVertexAttribP1uiv(int index, int type, boolean normalized, IntBuffer value) {
         GL33.glVertexAttribP1uiv(index, type, normalized, value);
-    }
-
-    @Override
-    public void nglVertexAttribP2uiv(int index, int type, boolean normalized, long value) {
-        GL33.nglVertexAttribP2uiv(index, type, normalized, value);
     }
 
     @Override
@@ -502,18 +347,8 @@ public class LwjglGL33 extends LwjglGL32 implements GLI33 {
     }
 
     @Override
-    public void nglVertexAttribP3uiv(int index, int type, boolean normalized, long value) {
-        GL33.nglVertexAttribP3uiv(index, type, normalized, value);
-    }
-
-    @Override
     public void glVertexAttribP3uiv(int index, int type, boolean normalized, IntBuffer value) {
         GL33.glVertexAttribP3uiv(index, type, normalized, value);
-    }
-
-    @Override
-    public void nglVertexAttribP4uiv(int index, int type, boolean normalized, long value) {
-        GL33.nglVertexAttribP4uiv(index, type, normalized, value);
     }
 
     @Override

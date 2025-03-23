@@ -27,11 +27,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public boolean nglAreTexturesResident(int var0, long var1, long var3) {
-        return GL11.nglAreTexturesResident(var0, var1, var3);
-    }
-
-    @Override
     public boolean glAreTexturesResident(IntBuffer textures, ByteBuffer residences) {
         return GL11.glAreTexturesResident(textures, residences);
     }
@@ -57,11 +52,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglBitmap(int var0, int var1, float var2, float var3, float var4, float var5, long var6) {
-        GL11.nglBitmap(var0, var1, var2, var3, var4, var5, var6);
-    }
-
-    @Override
     public void glBitmap(int w, int h, float xOrig, float yOrig, float xInc, float yInc, ByteBuffer data) {
         GL11.glBitmap(w, h, xOrig, yOrig, xInc, yInc, data);
     }
@@ -79,11 +69,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glCallList(int var0) {
         GL11.glCallList(var0);
-    }
-
-    @Override
-    public void nglCallLists(int var0, int var1, long var2) {
-        GL11.nglCallLists(var0, var1, var2);
     }
 
     @Override
@@ -137,11 +122,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglClipPlane(int var0, long var1) {
-        GL11.nglClipPlane(var0, var1);
-    }
-
-    @Override
     public void glClipPlane(int plane, DoubleBuffer equation) {
         GL11.glClipPlane(plane, equation);
     }
@@ -187,18 +167,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor3bv(long var0) {
-        GL11.nglColor3bv(var0);
-    }
-
-    @Override
     public void glColor3bv(ByteBuffer v) {
         GL11.glColor3bv(v);
-    }
-
-    @Override
-    public void nglColor3sv(long var0) {
-        GL11.nglColor3sv(var0);
     }
 
     @Override
@@ -207,18 +177,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor3iv(long var0) {
-        GL11.nglColor3iv(var0);
-    }
-
-    @Override
     public void glColor3iv(IntBuffer v) {
         GL11.glColor3iv(v);
-    }
-
-    @Override
-    public void nglColor3fv(long var0) {
-        GL11.nglColor3fv(var0);
     }
 
     @Override
@@ -227,18 +187,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor3dv(long var0) {
-        GL11.nglColor3dv(var0);
-    }
-
-    @Override
     public void glColor3dv(DoubleBuffer v) {
         GL11.glColor3dv(v);
-    }
-
-    @Override
-    public void nglColor3ubv(long var0) {
-        GL11.nglColor3ubv(var0);
     }
 
     @Override
@@ -247,18 +197,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor3usv(long var0) {
-        GL11.nglColor3usv(var0);
-    }
-
-    @Override
     public void glColor3usv(ShortBuffer v) {
         GL11.glColor3usv(v);
-    }
-
-    @Override
-    public void nglColor3uiv(long var0) {
-        GL11.nglColor3uiv(var0);
     }
 
     @Override
@@ -307,18 +247,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor4bv(long var0) {
-        GL11.nglColor4bv(var0);
-    }
-
-    @Override
     public void glColor4bv(ByteBuffer v) {
         GL11.glColor4bv(v);
-    }
-
-    @Override
-    public void nglColor4sv(long var0) {
-        GL11.nglColor4sv(var0);
     }
 
     @Override
@@ -327,18 +257,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor4iv(long var0) {
-        GL11.nglColor4iv(var0);
-    }
-
-    @Override
     public void glColor4iv(IntBuffer v) {
         GL11.glColor4iv(v);
-    }
-
-    @Override
-    public void nglColor4fv(long var0) {
-        GL11.nglColor4fv(var0);
     }
 
     @Override
@@ -347,18 +267,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor4dv(long var0) {
-        GL11.nglColor4dv(var0);
-    }
-
-    @Override
     public void glColor4dv(DoubleBuffer v) {
         GL11.glColor4dv(v);
-    }
-
-    @Override
-    public void nglColor4ubv(long var0) {
-        GL11.nglColor4ubv(var0);
     }
 
     @Override
@@ -367,18 +277,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglColor4usv(long var0) {
-        GL11.nglColor4usv(var0);
-    }
-
-    @Override
     public void glColor4usv(ShortBuffer v) {
         GL11.glColor4usv(v);
-    }
-
-    @Override
-    public void nglColor4uiv(long var0) {
-        GL11.nglColor4uiv(var0);
     }
 
     @Override
@@ -394,11 +294,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glColorMaterial(int var0, int var1) {
         GL11.glColorMaterial(var0, var1);
-    }
-
-    @Override
-    public void nglColorPointer(int var0, int var1, int var2, long var3) {
-        GL11.nglColorPointer(var0, var1, var2, var3);
     }
 
     @Override
@@ -472,11 +367,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglDrawElements(int mode, int count, int type, long indices) {
-        GL11.nglDrawElements(mode, count, type, indices);
-    }
-
-    @Override
     public void glDrawElements(int mode, int count, int type, long indices) {
         GL11.glDrawElements(mode, count, type, indices);
     }
@@ -499,11 +389,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glDrawElements(int mode, IntBuffer indices) {
         GL11.glDrawElements(mode, indices);
-    }
-
-    @Override
-    public void nglDrawPixels(int var0, int var1, int var2, int var3, long var4) {
-        GL11.nglDrawPixels(var0, var1, var2, var3, var4);
     }
 
     @Override
@@ -537,18 +422,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglEdgeFlagv(long var0) {
-        GL11.nglEdgeFlagv(var0);
-    }
-
-    @Override
     public void glEdgeFlagv(ByteBuffer flag) {
         GL11.glEdgeFlagv(flag);
-    }
-
-    @Override
-    public void nglEdgeFlagPointer(int var0, long var1) {
-        GL11.nglEdgeFlagPointer(var0, var1);
     }
 
     @Override
@@ -577,11 +452,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglEvalCoord1fv(long var0) {
-        GL11.nglEvalCoord1fv(var0);
-    }
-
-    @Override
     public void glEvalCoord1fv(FloatBuffer u) {
         GL11.glEvalCoord1fv(u);
     }
@@ -589,11 +459,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glEvalCoord1d(double var0) {
         GL11.glEvalCoord1d(var0);
-    }
-
-    @Override
-    public void nglEvalCoord1dv(long var0) {
-        GL11.nglEvalCoord1dv(var0);
     }
 
     @Override
@@ -607,11 +472,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglEvalCoord2fv(long var0) {
-        GL11.nglEvalCoord2fv(var0);
-    }
-
-    @Override
     public void glEvalCoord2fv(FloatBuffer u) {
         GL11.glEvalCoord2fv(u);
     }
@@ -619,11 +479,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glEvalCoord2d(double var0, double var2) {
         GL11.glEvalCoord2d(var0, var2);
-    }
-
-    @Override
-    public void nglEvalCoord2dv(long var0) {
-        GL11.nglEvalCoord2dv(var0);
     }
 
     @Override
@@ -652,11 +507,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglFeedbackBuffer(int var0, int var1, long var2) {
-        GL11.nglFeedbackBuffer(var0, var1, var2);
-    }
-
-    @Override
     public void glFeedbackBuffer(int type, FloatBuffer buffer) {
         GL11.glFeedbackBuffer(type, buffer);
     }
@@ -677,11 +527,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglFogiv(int var0, long var1) {
-        GL11.nglFogiv(var0, var1);
-    }
-
-    @Override
     public void glFogiv(int pname, IntBuffer params) {
         GL11.glFogiv(pname, params);
     }
@@ -689,11 +534,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glFogf(int var0, float var1) {
         GL11.glFogf(var0, var1);
-    }
-
-    @Override
-    public void nglFogfv(int var0, long var1) {
-        GL11.nglFogfv(var0, var1);
     }
 
     @Override
@@ -712,11 +552,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGenTextures(int n, long textures) {
-        GL11.nglGenTextures(n, textures);
-    }
-
-    @Override
     public void glGenTextures(IntBuffer textures) {
         GL11.glGenTextures(textures);
     }
@@ -724,11 +559,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public int glGenTextures() {
         return GL11.glGenTextures();
-    }
-
-    @Override
-    public void nglDeleteTextures(int n, long textures) {
-        GL11.nglDeleteTextures(n, textures);
     }
 
     @Override
@@ -742,18 +572,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetClipPlane(int var0, long var1) {
-        GL11.nglGetClipPlane(var0, var1);
-    }
-
-    @Override
     public void glGetClipPlane(int plane, DoubleBuffer equation) {
         GL11.glGetClipPlane(plane, equation);
-    }
-
-    @Override
-    public void nglGetBooleanv(int pname, long params) {
-        GL11.nglGetBooleanv(pname, params);
     }
 
     @Override
@@ -767,11 +587,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetFloatv(int pname, long params) {
-        GL11.nglGetFloatv(pname, params);
-    }
-
-    @Override
     public void glGetFloatv(int pname, FloatBuffer params) {
         GL11.glGetFloatv(pname, params);
     }
@@ -782,11 +597,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetIntegerv(int pname, long params) {
-        GL11.nglGetIntegerv(pname, params);
-    }
-
-    @Override
     public void glGetIntegerv(int pname, IntBuffer params) {
         GL11.glGetIntegerv(pname, params);
     }
@@ -794,11 +604,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public int glGetInteger(int pname) {
         return GL11.glGetInteger(pname);
-    }
-
-    @Override
-    public void nglGetDoublev(int pname, long params) {
-        GL11.nglGetDoublev(pname, params);
     }
 
     @Override
@@ -817,11 +622,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetLightiv(int var0, int var1, long var2) {
-        GL11.nglGetLightiv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetLightiv(int light, int pname, IntBuffer data) {
         GL11.glGetLightiv(light, pname, data);
     }
@@ -829,11 +629,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public int glGetLighti(int light, int pname) {
         return GL11.glGetLighti(light, pname);
-    }
-
-    @Override
-    public void nglGetLightfv(int var0, int var1, long var2) {
-        GL11.nglGetLightfv(var0, var1, var2);
     }
 
     @Override
@@ -847,11 +642,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetMapiv(int var0, int var1, long var2) {
-        GL11.nglGetMapiv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetMapiv(int target, int query, IntBuffer data) {
         GL11.glGetMapiv(target, query, data);
     }
@@ -859,11 +649,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public int glGetMapi(int target, int query) {
         return GL11.glGetMapi(target, query);
-    }
-
-    @Override
-    public void nglGetMapfv(int var0, int var1, long var2) {
-        GL11.nglGetMapfv(var0, var1, var2);
     }
 
     @Override
@@ -877,11 +662,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetMapdv(int var0, int var1, long var2) {
-        GL11.nglGetMapdv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetMapdv(int target, int query, DoubleBuffer data) {
         GL11.glGetMapdv(target, query, data);
     }
@@ -892,28 +672,13 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetMaterialiv(int var0, int var1, long var2) {
-        GL11.nglGetMaterialiv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetMaterialiv(int face, int pname, IntBuffer data) {
         GL11.glGetMaterialiv(face, pname, data);
     }
 
     @Override
-    public void nglGetMaterialfv(int var0, int var1, long var2) {
-        GL11.nglGetMaterialfv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetMaterialfv(int face, int pname, FloatBuffer data) {
         GL11.glGetMaterialfv(face, pname, data);
-    }
-
-    @Override
-    public void nglGetPixelMapfv(int var0, long var1) {
-        GL11.nglGetPixelMapfv(var0, var1);
     }
 
     @Override
@@ -927,11 +692,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetPixelMapusv(int var0, long var1) {
-        GL11.nglGetPixelMapusv(var0, var1);
-    }
-
-    @Override
     public void glGetPixelMapusv(int map, ShortBuffer data) {
         GL11.glGetPixelMapusv(map, data);
     }
@@ -939,11 +699,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glGetPixelMapusv(int map, long data) {
         GL11.glGetPixelMapusv(map, data);
-    }
-
-    @Override
-    public void nglGetPixelMapuiv(int var0, long var1) {
-        GL11.nglGetPixelMapuiv(var0, var1);
     }
 
     @Override
@@ -957,18 +712,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetPointerv(int pname, long params) {
-        GL11.nglGetPointerv(pname, params);
-    }
-
-    @Override
     public long glGetPointer(int pname) {
         return GL11.glGetPointer(pname);
-    }
-
-    @Override
-    public void nglGetPolygonStipple(long var0) {
-        GL11.nglGetPolygonStipple(var0);
     }
 
     @Override
@@ -982,18 +727,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public long nglGetString(int name) {
-        return GL11.nglGetString(name);
-    }
-
-    @Override
     public String glGetString(int name) {
         return GL11.glGetString(name);
-    }
-
-    @Override
-    public void nglGetTexEnviv(int var0, int var1, long var2) {
-        GL11.nglGetTexEnviv(var0, var1, var2);
     }
 
     @Override
@@ -1007,11 +742,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetTexEnvfv(int var0, int var1, long var2) {
-        GL11.nglGetTexEnvfv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetTexEnvfv(int env, int pname, FloatBuffer data) {
         GL11.glGetTexEnvfv(env, pname, data);
     }
@@ -1019,11 +749,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public float glGetTexEnvf(int env, int pname) {
         return GL11.glGetTexEnvf(env, pname);
-    }
-
-    @Override
-    public void nglGetTexGeniv(int var0, int var1, long var2) {
-        GL11.nglGetTexGeniv(var0, var1, var2);
     }
 
     @Override
@@ -1037,11 +762,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetTexGenfv(int var0, int var1, long var2) {
-        GL11.nglGetTexGenfv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetTexGenfv(int coord, int pname, FloatBuffer data) {
         GL11.glGetTexGenfv(coord, pname, data);
     }
@@ -1052,11 +772,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetTexGendv(int var0, int var1, long var2) {
-        GL11.nglGetTexGendv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetTexGendv(int coord, int pname, DoubleBuffer data) {
         GL11.glGetTexGendv(coord, pname, data);
     }
@@ -1064,11 +779,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public double glGetTexGend(int coord, int pname) {
         return GL11.glGetTexGend(coord, pname);
-    }
-
-    @Override
-    public void nglGetTexImage(int tex, int level, int format, int type, long pixels) {
-        GL11.nglGetTexImage(tex, level, format, type, pixels);
     }
 
     @Override
@@ -1102,11 +812,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetTexLevelParameteriv(int target, int level, int pname, long params) {
-        GL11.nglGetTexLevelParameteriv(target, level, pname, params);
-    }
-
-    @Override
     public void glGetTexLevelParameteriv(int target, int level, int pname, IntBuffer params) {
         GL11.glGetTexLevelParameteriv(target, level, pname, params);
     }
@@ -1114,11 +819,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public int glGetTexLevelParameteri(int target, int level, int pname) {
         return GL11.glGetTexLevelParameteri(target, level, pname);
-    }
-
-    @Override
-    public void nglGetTexLevelParameterfv(int target, int level, int pname, long params) {
-        GL11.nglGetTexLevelParameterfv(target, level, pname, params);
     }
 
     @Override
@@ -1132,11 +832,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglGetTexParameteriv(int target, int pname, long params) {
-        GL11.nglGetTexParameteriv(target, pname, params);
-    }
-
-    @Override
     public void glGetTexParameteriv(int target, int pname, IntBuffer params) {
         GL11.glGetTexParameteriv(target, pname, params);
     }
@@ -1144,11 +839,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public int glGetTexParameteri(int target, int pname) {
         return GL11.glGetTexParameteri(target, pname);
-    }
-
-    @Override
-    public void nglGetTexParameterfv(int target, int pname, long params) {
-        GL11.nglGetTexParameterfv(target, pname, params);
     }
 
     @Override
@@ -1192,18 +882,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglIndexiv(long var0) {
-        GL11.nglIndexiv(var0);
-    }
-
-    @Override
     public void glIndexiv(IntBuffer index) {
         GL11.glIndexiv(index);
-    }
-
-    @Override
-    public void nglIndexubv(long var0) {
-        GL11.nglIndexubv(var0);
     }
 
     @Override
@@ -1212,28 +892,13 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglIndexsv(long var0) {
-        GL11.nglIndexsv(var0);
-    }
-
-    @Override
     public void glIndexsv(ShortBuffer index) {
         GL11.glIndexsv(index);
     }
 
     @Override
-    public void nglIndexfv(long var0) {
-        GL11.nglIndexfv(var0);
-    }
-
-    @Override
     public void glIndexfv(FloatBuffer index) {
         GL11.glIndexfv(index);
-    }
-
-    @Override
-    public void nglIndexdv(long var0) {
-        GL11.nglIndexdv(var0);
     }
 
     @Override
@@ -1244,11 +909,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glIndexMask(int var0) {
         GL11.glIndexMask(var0);
-    }
-
-    @Override
-    public void nglIndexPointer(int var0, int var1, long var2) {
-        GL11.nglIndexPointer(var0, var1, var2);
     }
 
     @Override
@@ -1279,11 +939,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glInitNames() {
         GL11.glInitNames();
-    }
-
-    @Override
-    public void nglInterleavedArrays(int var0, int var1, long var2) {
-        GL11.nglInterleavedArrays(var0, var1, var2);
     }
 
     @Override
@@ -1342,18 +997,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglLightModeliv(int var0, long var1) {
-        GL11.nglLightModeliv(var0, var1);
-    }
-
-    @Override
     public void glLightModeliv(int pname, IntBuffer params) {
         GL11.glLightModeliv(pname, params);
-    }
-
-    @Override
-    public void nglLightModelfv(int var0, long var1) {
-        GL11.nglLightModelfv(var0, var1);
     }
 
     @Override
@@ -1372,18 +1017,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglLightiv(int var0, int var1, long var2) {
-        GL11.nglLightiv(var0, var1, var2);
-    }
-
-    @Override
     public void glLightiv(int light, int pname, IntBuffer params) {
         GL11.glLightiv(light, pname, params);
-    }
-
-    @Override
-    public void nglLightfv(int var0, int var1, long var2) {
-        GL11.nglLightfv(var0, var1, var2);
     }
 
     @Override
@@ -1407,18 +1042,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglLoadMatrixf(long var0) {
-        GL11.nglLoadMatrixf(var0);
-    }
-
-    @Override
     public void glLoadMatrixf(FloatBuffer m) {
         GL11.glLoadMatrixf(m);
-    }
-
-    @Override
-    public void nglLoadMatrixd(long var0) {
-        GL11.nglLoadMatrixd(var0);
     }
 
     @Override
@@ -1442,18 +1067,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglMap1f(int var0, float var1, float var2, int var3, int var4, long var5) {
-        GL11.nglMap1f(var0, var1, var2, var3, var4, var5);
-    }
-
-    @Override
     public void glMap1f(int target, float u1, float u2, int stride, int order, FloatBuffer points) {
         GL11.glMap1f(target, u1, u2, stride, order, points);
-    }
-
-    @Override
-    public void nglMap1d(int var0, double var1, double var3, int var5, int var6, long var7) {
-        GL11.nglMap1d(var0, var1, var3, var5, var6, var7);
     }
 
     @Override
@@ -1462,18 +1077,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglMap2f(int var0, float var1, float var2, int var3, int var4, float var5, float var6, int var7, int var8, long var9) {
-        GL11.nglMap2f(var0, var1, var2, var3, var4, var5, var6, var7, var8, var9);
-    }
-
-    @Override
     public void glMap2f(int target, float u1, float u2, int ustride, int uorder, float v1, float v2, int vstride, int vorder, FloatBuffer points) {
         GL11.glMap2f(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
-    }
-
-    @Override
-    public void nglMap2d(int var0, double var1, double var3, int var5, int var6, double var7, double var9, int var11, int var12, long var13) {
-        GL11.nglMap2d(var0, var1, var3, var5, var6, var7, var9, var11, var12, var13);
     }
 
     @Override
@@ -1512,18 +1117,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglMaterialiv(int var0, int var1, long var2) {
-        GL11.nglMaterialiv(var0, var1, var2);
-    }
-
-    @Override
     public void glMaterialiv(int face, int pname, IntBuffer params) {
         GL11.glMaterialiv(face, pname, params);
-    }
-
-    @Override
-    public void nglMaterialfv(int var0, int var1, long var2) {
-        GL11.nglMaterialfv(var0, var1, var2);
     }
 
     @Override
@@ -1537,18 +1132,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglMultMatrixf(long var0) {
-        GL11.nglMultMatrixf(var0);
-    }
-
-    @Override
     public void glMultMatrixf(FloatBuffer m) {
         GL11.glMultMatrixf(m);
-    }
-
-    @Override
-    public void nglMultMatrixd(long var0) {
-        GL11.nglMultMatrixd(var0);
     }
 
     @Override
@@ -1597,18 +1182,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglNormal3fv(long var0) {
-        GL11.nglNormal3fv(var0);
-    }
-
-    @Override
     public void glNormal3fv(FloatBuffer v) {
         GL11.glNormal3fv(v);
-    }
-
-    @Override
-    public void nglNormal3bv(long var0) {
-        GL11.nglNormal3bv(var0);
     }
 
     @Override
@@ -1617,18 +1192,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglNormal3sv(long var0) {
-        GL11.nglNormal3sv(var0);
-    }
-
-    @Override
     public void glNormal3sv(ShortBuffer v) {
         GL11.glNormal3sv(v);
-    }
-
-    @Override
-    public void nglNormal3iv(long var0) {
-        GL11.nglNormal3iv(var0);
     }
 
     @Override
@@ -1637,18 +1202,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglNormal3dv(long var0) {
-        GL11.nglNormal3dv(var0);
-    }
-
-    @Override
     public void glNormal3dv(DoubleBuffer v) {
         GL11.glNormal3dv(v);
-    }
-
-    @Override
-    public void nglNormalPointer(int var0, int var1, long var2) {
-        GL11.nglNormalPointer(var0, var1, var2);
     }
 
     @Override
@@ -1687,11 +1242,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglPixelMapfv(int var0, int var1, long var2) {
-        GL11.nglPixelMapfv(var0, var1, var2);
-    }
-
-    @Override
     public void glPixelMapfv(int map, int size, long values) {
         GL11.glPixelMapfv(map, size, values);
     }
@@ -1702,11 +1252,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglPixelMapusv(int var0, int var1, long var2) {
-        GL11.nglPixelMapusv(var0, var1, var2);
-    }
-
-    @Override
     public void glPixelMapusv(int map, int size, long values) {
         GL11.glPixelMapusv(map, size, values);
     }
@@ -1714,11 +1259,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glPixelMapusv(int map, ShortBuffer values) {
         GL11.glPixelMapusv(map, values);
-    }
-
-    @Override
-    public void nglPixelMapuiv(int var0, int var1, long var2) {
-        GL11.nglPixelMapuiv(var0, var1, var2);
     }
 
     @Override
@@ -1772,11 +1312,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglPolygonStipple(long var0) {
-        GL11.nglPolygonStipple(var0);
-    }
-
-    @Override
     public void glPolygonStipple(ByteBuffer pattern) {
         GL11.glPolygonStipple(pattern);
     }
@@ -1817,11 +1352,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglPrioritizeTextures(int var0, long var1, long var3) {
-        GL11.nglPrioritizeTextures(var0, var1, var3);
-    }
-
-    @Override
     public void glPrioritizeTextures(IntBuffer textures, FloatBuffer priorities) {
         GL11.glPrioritizeTextures(textures, priorities);
     }
@@ -1857,18 +1387,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRasterPos2iv(long var0) {
-        GL11.nglRasterPos2iv(var0);
-    }
-
-    @Override
     public void glRasterPos2iv(IntBuffer coords) {
         GL11.glRasterPos2iv(coords);
-    }
-
-    @Override
-    public void nglRasterPos2sv(long var0) {
-        GL11.nglRasterPos2sv(var0);
     }
 
     @Override
@@ -1877,18 +1397,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRasterPos2fv(long var0) {
-        GL11.nglRasterPos2fv(var0);
-    }
-
-    @Override
     public void glRasterPos2fv(FloatBuffer coords) {
         GL11.glRasterPos2fv(coords);
-    }
-
-    @Override
-    public void nglRasterPos2dv(long var0) {
-        GL11.nglRasterPos2dv(var0);
     }
 
     @Override
@@ -1917,18 +1427,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRasterPos3iv(long var0) {
-        GL11.nglRasterPos3iv(var0);
-    }
-
-    @Override
     public void glRasterPos3iv(IntBuffer coords) {
         GL11.glRasterPos3iv(coords);
-    }
-
-    @Override
-    public void nglRasterPos3sv(long var0) {
-        GL11.nglRasterPos3sv(var0);
     }
 
     @Override
@@ -1937,18 +1437,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRasterPos3fv(long var0) {
-        GL11.nglRasterPos3fv(var0);
-    }
-
-    @Override
     public void glRasterPos3fv(FloatBuffer coords) {
         GL11.glRasterPos3fv(coords);
-    }
-
-    @Override
-    public void nglRasterPos3dv(long var0) {
-        GL11.nglRasterPos3dv(var0);
     }
 
     @Override
@@ -1977,18 +1467,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRasterPos4iv(long var0) {
-        GL11.nglRasterPos4iv(var0);
-    }
-
-    @Override
     public void glRasterPos4iv(IntBuffer coords) {
         GL11.glRasterPos4iv(coords);
-    }
-
-    @Override
-    public void nglRasterPos4sv(long var0) {
-        GL11.nglRasterPos4sv(var0);
     }
 
     @Override
@@ -1997,18 +1477,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRasterPos4fv(long var0) {
-        GL11.nglRasterPos4fv(var0);
-    }
-
-    @Override
     public void glRasterPos4fv(FloatBuffer coords) {
         GL11.glRasterPos4fv(coords);
-    }
-
-    @Override
-    public void nglRasterPos4dv(long var0) {
-        GL11.nglRasterPos4dv(var0);
     }
 
     @Override
@@ -2019,11 +1489,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glReadBuffer(int src) {
         GL11.glReadBuffer(src);
-    }
-
-    @Override
-    public void nglReadPixels(int x, int y, int width, int height, int format, int type, long pixels) {
-        GL11.nglReadPixels(x, y, width, height, format, type, pixels);
     }
 
     @Override
@@ -2072,18 +1537,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRectiv(long var0, long var2) {
-        GL11.nglRectiv(var0, var2);
-    }
-
-    @Override
     public void glRectiv(IntBuffer v1, IntBuffer v2) {
         GL11.glRectiv(v1, v2);
-    }
-
-    @Override
-    public void nglRectsv(long var0, long var2) {
-        GL11.nglRectsv(var0, var2);
     }
 
     @Override
@@ -2092,18 +1547,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglRectfv(long var0, long var2) {
-        GL11.nglRectfv(var0, var2);
-    }
-
-    @Override
     public void glRectfv(FloatBuffer v1, FloatBuffer v2) {
         GL11.glRectfv(v1, v2);
-    }
-
-    @Override
-    public void nglRectdv(long var0, long var2) {
-        GL11.nglRectdv(var0, var2);
     }
 
     @Override
@@ -2139,11 +1584,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glScissor(int x, int y, int width, int height) {
         GL11.glScissor(x, y, width, height);
-    }
-
-    @Override
-    public void nglSelectBuffer(int var0, long var1) {
-        GL11.nglSelectBuffer(var0, var1);
     }
 
     @Override
@@ -2192,18 +1632,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord1fv(long var0) {
-        GL11.nglTexCoord1fv(var0);
-    }
-
-    @Override
     public void glTexCoord1fv(FloatBuffer v) {
         GL11.glTexCoord1fv(v);
-    }
-
-    @Override
-    public void nglTexCoord1sv(long var0) {
-        GL11.nglTexCoord1sv(var0);
     }
 
     @Override
@@ -2212,18 +1642,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord1iv(long var0) {
-        GL11.nglTexCoord1iv(var0);
-    }
-
-    @Override
     public void glTexCoord1iv(IntBuffer v) {
         GL11.glTexCoord1iv(v);
-    }
-
-    @Override
-    public void nglTexCoord1dv(long var0) {
-        GL11.nglTexCoord1dv(var0);
     }
 
     @Override
@@ -2252,18 +1672,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord2fv(long var0) {
-        GL11.nglTexCoord2fv(var0);
-    }
-
-    @Override
     public void glTexCoord2fv(FloatBuffer v) {
         GL11.glTexCoord2fv(v);
-    }
-
-    @Override
-    public void nglTexCoord2sv(long var0) {
-        GL11.nglTexCoord2sv(var0);
     }
 
     @Override
@@ -2272,18 +1682,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord2iv(long var0) {
-        GL11.nglTexCoord2iv(var0);
-    }
-
-    @Override
     public void glTexCoord2iv(IntBuffer v) {
         GL11.glTexCoord2iv(v);
-    }
-
-    @Override
-    public void nglTexCoord2dv(long var0) {
-        GL11.nglTexCoord2dv(var0);
     }
 
     @Override
@@ -2312,18 +1712,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord3fv(long var0) {
-        GL11.nglTexCoord3fv(var0);
-    }
-
-    @Override
     public void glTexCoord3fv(FloatBuffer v) {
         GL11.glTexCoord3fv(v);
-    }
-
-    @Override
-    public void nglTexCoord3sv(long var0) {
-        GL11.nglTexCoord3sv(var0);
     }
 
     @Override
@@ -2332,18 +1722,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord3iv(long var0) {
-        GL11.nglTexCoord3iv(var0);
-    }
-
-    @Override
     public void glTexCoord3iv(IntBuffer v) {
         GL11.glTexCoord3iv(v);
-    }
-
-    @Override
-    public void nglTexCoord3dv(long var0) {
-        GL11.nglTexCoord3dv(var0);
     }
 
     @Override
@@ -2372,18 +1752,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord4fv(long var0) {
-        GL11.nglTexCoord4fv(var0);
-    }
-
-    @Override
     public void glTexCoord4fv(FloatBuffer v) {
         GL11.glTexCoord4fv(v);
-    }
-
-    @Override
-    public void nglTexCoord4sv(long var0) {
-        GL11.nglTexCoord4sv(var0);
     }
 
     @Override
@@ -2392,28 +1762,13 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexCoord4iv(long var0) {
-        GL11.nglTexCoord4iv(var0);
-    }
-
-    @Override
     public void glTexCoord4iv(IntBuffer v) {
         GL11.glTexCoord4iv(v);
     }
 
     @Override
-    public void nglTexCoord4dv(long var0) {
-        GL11.nglTexCoord4dv(var0);
-    }
-
-    @Override
     public void glTexCoord4dv(DoubleBuffer v) {
         GL11.glTexCoord4dv(v);
-    }
-
-    @Override
-    public void nglTexCoordPointer(int var0, int var1, int var2, long var3) {
-        GL11.nglTexCoordPointer(var0, var1, var2, var3);
     }
 
     @Override
@@ -2447,11 +1802,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexEnviv(int var0, int var1, long var2) {
-        GL11.nglTexEnviv(var0, var1, var2);
-    }
-
-    @Override
     public void glTexEnviv(int target, int pname, IntBuffer params) {
         GL11.glTexEnviv(target, pname, params);
     }
@@ -2459,11 +1809,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glTexEnvf(int var0, int var1, float var2) {
         GL11.glTexEnvf(var0, var1, var2);
-    }
-
-    @Override
-    public void nglTexEnvfv(int var0, int var1, long var2) {
-        GL11.nglTexEnvfv(var0, var1, var2);
     }
 
     @Override
@@ -2477,11 +1822,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexGeniv(int var0, int var1, long var2) {
-        GL11.nglTexGeniv(var0, var1, var2);
-    }
-
-    @Override
     public void glTexGeniv(int coord, int pname, IntBuffer params) {
         GL11.glTexGeniv(coord, pname, params);
     }
@@ -2489,11 +1829,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glTexGenf(int var0, int var1, float var2) {
         GL11.glTexGenf(var0, var1, var2);
-    }
-
-    @Override
-    public void nglTexGenfv(int var0, int var1, long var2) {
-        GL11.nglTexGenfv(var0, var1, var2);
     }
 
     @Override
@@ -2507,18 +1842,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexGendv(int var0, int var1, long var2) {
-        GL11.nglTexGendv(var0, var1, var2);
-    }
-
-    @Override
     public void glTexGendv(int coord, int pname, DoubleBuffer params) {
         GL11.glTexGendv(coord, pname, params);
-    }
-
-    @Override
-    public void nglTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, long pixels) {
-        GL11.nglTexImage1D(target, level, internalformat, width, border, format, type, pixels);
     }
 
     @Override
@@ -2549,11 +1874,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, DoubleBuffer pixels) {
         GL11.glTexImage1D(target, level, internalformat, width, border, format, type, pixels);
-    }
-
-    @Override
-    public void nglTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, long pixels) {
-        GL11.nglTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
     @Override
@@ -2612,11 +1932,6 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexParameteriv(int target, int pname, long params) {
-        GL11.nglTexParameteriv(target, pname, params);
-    }
-
-    @Override
     public void glTexParameteriv(int target, int pname, IntBuffer params) {
         GL11.glTexParameteriv(target, pname, params);
     }
@@ -2627,18 +1942,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglTexParameterfv(int target, int pname, long params) {
-        GL11.nglTexParameterfv(target, pname, params);
-    }
-
-    @Override
     public void glTexParameterfv(int target, int pname, FloatBuffer params) {
         GL11.glTexParameterfv(target, pname, params);
-    }
-
-    @Override
-    public void nglTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, long pixels) {
-        GL11.nglTexSubImage1D(target, level, xoffset, width, format, type, pixels);
     }
 
     @Override
@@ -2669,11 +1974,6 @@ public class LwjglGL11 implements GLI11 {
     @Override
     public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, DoubleBuffer pixels) {
         GL11.glTexSubImage1D(target, level, xoffset, width, format, type, pixels);
-    }
-
-    @Override
-    public void nglTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, long pixels) {
-        GL11.nglTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
     @Override
@@ -2737,18 +2037,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglVertex2fv(long var0) {
-        GL11.nglVertex2fv(var0);
-    }
-
-    @Override
     public void glVertex2fv(FloatBuffer coords) {
         GL11.glVertex2fv(coords);
-    }
-
-    @Override
-    public void nglVertex2sv(long var0) {
-        GL11.nglVertex2sv(var0);
     }
 
     @Override
@@ -2757,18 +2047,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglVertex2iv(long var0) {
-        GL11.nglVertex2iv(var0);
-    }
-
-    @Override
     public void glVertex2iv(IntBuffer coords) {
         GL11.glVertex2iv(coords);
-    }
-
-    @Override
-    public void nglVertex2dv(long var0) {
-        GL11.nglVertex2dv(var0);
     }
 
     @Override
@@ -2797,18 +2077,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglVertex3fv(long var0) {
-        GL11.nglVertex3fv(var0);
-    }
-
-    @Override
     public void glVertex3fv(FloatBuffer coords) {
         GL11.glVertex3fv(coords);
-    }
-
-    @Override
-    public void nglVertex3sv(long var0) {
-        GL11.nglVertex3sv(var0);
     }
 
     @Override
@@ -2817,18 +2087,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglVertex3iv(long var0) {
-        GL11.nglVertex3iv(var0);
-    }
-
-    @Override
     public void glVertex3iv(IntBuffer coords) {
         GL11.glVertex3iv(coords);
-    }
-
-    @Override
-    public void nglVertex3dv(long var0) {
-        GL11.nglVertex3dv(var0);
     }
 
     @Override
@@ -2857,18 +2117,8 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglVertex4fv(long var0) {
-        GL11.nglVertex4fv(var0);
-    }
-
-    @Override
     public void glVertex4fv(FloatBuffer coords) {
         GL11.glVertex4fv(coords);
-    }
-
-    @Override
-    public void nglVertex4sv(long var0) {
-        GL11.nglVertex4sv(var0);
     }
 
     @Override
@@ -2877,28 +2127,13 @@ public class LwjglGL11 implements GLI11 {
     }
 
     @Override
-    public void nglVertex4iv(long var0) {
-        GL11.nglVertex4iv(var0);
-    }
-
-    @Override
     public void glVertex4iv(IntBuffer coords) {
         GL11.glVertex4iv(coords);
     }
 
     @Override
-    public void nglVertex4dv(long var0) {
-        GL11.nglVertex4dv(var0);
-    }
-
-    @Override
     public void glVertex4dv(DoubleBuffer coords) {
         GL11.glVertex4dv(coords);
-    }
-
-    @Override
-    public void nglVertexPointer(int var0, int var1, int var2, long var3) {
-        GL11.nglVertexPointer(var0, var1, var2, var3);
     }
 
     @Override

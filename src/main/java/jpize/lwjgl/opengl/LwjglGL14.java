@@ -27,28 +27,13 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglFogCoordfv(long var0) {
-        GL14.nglFogCoordfv(var0);
-    }
-
-    @Override
     public void glFogCoordfv(FloatBuffer coord) {
         GL14.glFogCoordfv(coord);
     }
 
     @Override
-    public void nglFogCoorddv(long var0) {
-        GL14.nglFogCoorddv(var0);
-    }
-
-    @Override
     public void glFogCoorddv(DoubleBuffer coord) {
         GL14.glFogCoorddv(coord);
-    }
-
-    @Override
-    public void nglFogCoordPointer(int var0, int var1, long var2) {
-        GL14.nglFogCoordPointer(var0, var1, var2);
     }
 
     @Override
@@ -72,18 +57,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglMultiDrawArrays(int mode, long first, long count, int drawcount) {
-        GL14.nglMultiDrawArrays(mode, first, count, drawcount);
-    }
-
-    @Override
     public void glMultiDrawArrays(int mode, IntBuffer first, IntBuffer count) {
         GL14.glMultiDrawArrays(mode, first, count);
-    }
-
-    @Override
-    public void nglMultiDrawElements(int mode, long count, int type, long indices, int drawcount) {
-        GL14.nglMultiDrawElements(mode, count, type, indices, drawcount);
     }
 
     @Override
@@ -97,18 +72,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglPointParameterfv(int pname, long params) {
-        GL14.nglPointParameterfv(pname, params);
-    }
-
-    @Override
     public void glPointParameterfv(int pname, FloatBuffer params) {
         GL14.glPointParameterfv(pname, params);
-    }
-
-    @Override
-    public void nglPointParameteriv(int pname, long params) {
-        GL14.nglPointParameteriv(pname, params);
     }
 
     @Override
@@ -157,18 +122,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglSecondaryColor3bv(long var0) {
-        GL14.nglSecondaryColor3bv(var0);
-    }
-
-    @Override
     public void glSecondaryColor3bv(ByteBuffer v) {
         GL14.glSecondaryColor3bv(v);
-    }
-
-    @Override
-    public void nglSecondaryColor3sv(long var0) {
-        GL14.nglSecondaryColor3sv(var0);
     }
 
     @Override
@@ -177,18 +132,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglSecondaryColor3iv(long var0) {
-        GL14.nglSecondaryColor3iv(var0);
-    }
-
-    @Override
     public void glSecondaryColor3iv(IntBuffer v) {
         GL14.glSecondaryColor3iv(v);
-    }
-
-    @Override
-    public void nglSecondaryColor3fv(long var0) {
-        GL14.nglSecondaryColor3fv(var0);
     }
 
     @Override
@@ -197,18 +142,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglSecondaryColor3dv(long var0) {
-        GL14.nglSecondaryColor3dv(var0);
-    }
-
-    @Override
     public void glSecondaryColor3dv(DoubleBuffer v) {
         GL14.glSecondaryColor3dv(v);
-    }
-
-    @Override
-    public void nglSecondaryColor3ubv(long var0) {
-        GL14.nglSecondaryColor3ubv(var0);
     }
 
     @Override
@@ -217,28 +152,13 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglSecondaryColor3usv(long var0) {
-        GL14.nglSecondaryColor3usv(var0);
-    }
-
-    @Override
     public void glSecondaryColor3usv(ShortBuffer v) {
         GL14.glSecondaryColor3usv(v);
     }
 
     @Override
-    public void nglSecondaryColor3uiv(long var0) {
-        GL14.nglSecondaryColor3uiv(var0);
-    }
-
-    @Override
     public void glSecondaryColor3uiv(IntBuffer v) {
         GL14.glSecondaryColor3uiv(v);
-    }
-
-    @Override
-    public void nglSecondaryColorPointer(int var0, int var1, int var2, long var3) {
-        GL14.nglSecondaryColorPointer(var0, var1, var2, var3);
     }
 
     @Override
@@ -292,18 +212,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglWindowPos2iv(long var0) {
-        GL14.nglWindowPos2iv(var0);
-    }
-
-    @Override
     public void glWindowPos2iv(IntBuffer p) {
         GL14.glWindowPos2iv(p);
-    }
-
-    @Override
-    public void nglWindowPos2sv(long var0) {
-        GL14.nglWindowPos2sv(var0);
     }
 
     @Override
@@ -312,18 +222,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglWindowPos2fv(long var0) {
-        GL14.nglWindowPos2fv(var0);
-    }
-
-    @Override
     public void glWindowPos2fv(FloatBuffer p) {
         GL14.glWindowPos2fv(p);
-    }
-
-    @Override
-    public void nglWindowPos2dv(long var0) {
-        GL14.nglWindowPos2dv(var0);
     }
 
     @Override
@@ -352,18 +252,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglWindowPos3iv(long var0) {
-        GL14.nglWindowPos3iv(var0);
-    }
-
-    @Override
     public void glWindowPos3iv(IntBuffer p) {
         GL14.glWindowPos3iv(p);
-    }
-
-    @Override
-    public void nglWindowPos3sv(long var0) {
-        GL14.nglWindowPos3sv(var0);
     }
 
     @Override
@@ -372,18 +262,8 @@ public class LwjglGL14 extends LwjglGL13 implements GLI14 {
     }
 
     @Override
-    public void nglWindowPos3fv(long var0) {
-        GL14.nglWindowPos3fv(var0);
-    }
-
-    @Override
     public void glWindowPos3fv(FloatBuffer p) {
         GL14.glWindowPos3fv(p);
-    }
-
-    @Override
-    public void nglWindowPos3dv(long var0) {
-        GL14.nglWindowPos3dv(var0);
     }
 
     @Override

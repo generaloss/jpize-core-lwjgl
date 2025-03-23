@@ -7,18 +7,8 @@ import java.nio.*;
 public class LwjglGL30 extends LwjglGL21 implements GLI30 {
 
     @Override
-    public long nglGetStringi(int name, int index) {
-        return GL30.nglGetStringi(name, index);
-    }
-
-    @Override
     public String glGetStringi(int name, int index) {
         return GL30.glGetStringi(name, index);
-    }
-
-    @Override
-    public void nglClearBufferiv(int buffer, int drawbuffer, long value) {
-        GL30.nglClearBufferiv(buffer, drawbuffer, value);
     }
 
     @Override
@@ -27,18 +17,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglClearBufferuiv(int buffer, int drawbuffer, long value) {
-        GL30.nglClearBufferuiv(buffer, drawbuffer, value);
-    }
-
-    @Override
     public void glClearBufferuiv(int buffer, int drawbuffer, IntBuffer value) {
         GL30.glClearBufferuiv(buffer, drawbuffer, value);
-    }
-
-    @Override
-    public void nglClearBufferfv(int buffer, int drawbuffer, long value) {
-        GL30.nglClearBufferfv(buffer, drawbuffer, value);
     }
 
     @Override
@@ -92,18 +72,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglVertexAttribI1iv(int index, long v) {
-        GL30.nglVertexAttribI1iv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI1iv(int index, IntBuffer v) {
         GL30.glVertexAttribI1iv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribI2iv(int index, long v) {
-        GL30.nglVertexAttribI2iv(index, v);
     }
 
     @Override
@@ -112,18 +82,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglVertexAttribI3iv(int index, long v) {
-        GL30.nglVertexAttribI3iv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI3iv(int index, IntBuffer v) {
         GL30.glVertexAttribI3iv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribI4iv(int index, long v) {
-        GL30.nglVertexAttribI4iv(index, v);
     }
 
     @Override
@@ -132,18 +92,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglVertexAttribI1uiv(int index, long v) {
-        GL30.nglVertexAttribI1uiv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI1uiv(int index, IntBuffer v) {
         GL30.glVertexAttribI1uiv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribI2uiv(int index, long v) {
-        GL30.nglVertexAttribI2uiv(index, v);
     }
 
     @Override
@@ -152,18 +102,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglVertexAttribI3uiv(int index, long v) {
-        GL30.nglVertexAttribI3uiv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI3uiv(int index, IntBuffer v) {
         GL30.glVertexAttribI3uiv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribI4uiv(int index, long v) {
-        GL30.nglVertexAttribI4uiv(index, v);
     }
 
     @Override
@@ -172,18 +112,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglVertexAttribI4bv(int index, long v) {
-        GL30.nglVertexAttribI4bv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI4bv(int index, ByteBuffer v) {
         GL30.glVertexAttribI4bv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribI4sv(int index, long v) {
-        GL30.nglVertexAttribI4sv(index, v);
     }
 
     @Override
@@ -192,28 +122,13 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglVertexAttribI4ubv(int index, long v) {
-        GL30.nglVertexAttribI4ubv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI4ubv(int index, ByteBuffer v) {
         GL30.glVertexAttribI4ubv(index, v);
     }
 
     @Override
-    public void nglVertexAttribI4usv(int index, long v) {
-        GL30.nglVertexAttribI4usv(index, v);
-    }
-
-    @Override
     public void glVertexAttribI4usv(int index, ShortBuffer v) {
         GL30.glVertexAttribI4usv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribIPointer(int index, int size, int type, int stride, long pointer) {
-        GL30.nglVertexAttribIPointer(index, size, type, stride, pointer);
     }
 
     @Override
@@ -237,11 +152,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglGetVertexAttribIiv(int index, int pname, long params) {
-        GL30.nglGetVertexAttribIiv(index, pname, params);
-    }
-
-    @Override
     public void glGetVertexAttribIiv(int index, int pname, IntBuffer params) {
         GL30.glGetVertexAttribIiv(index, pname, params);
     }
@@ -249,11 +159,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public int glGetVertexAttribIi(int index, int pname) {
         return GL30.glGetVertexAttribIi(index, pname);
-    }
-
-    @Override
-    public void nglGetVertexAttribIuiv(int index, int pname, long params) {
-        GL30.nglGetVertexAttribIuiv(index, pname, params);
     }
 
     @Override
@@ -287,18 +192,8 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglUniform1uiv(int location, int count, long value) {
-        GL30.nglUniform1uiv(location, count, value);
-    }
-
-    @Override
     public void glUniform1uiv(int location, IntBuffer value) {
         GL30.glUniform1uiv(location, value);
-    }
-
-    @Override
-    public void nglUniform2uiv(int location, int count, long value) {
-        GL30.nglUniform2uiv(location, count, value);
     }
 
     @Override
@@ -307,28 +202,13 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglUniform3uiv(int location, int count, long value) {
-        GL30.nglUniform3uiv(location, count, value);
-    }
-
-    @Override
     public void glUniform3uiv(int location, IntBuffer value) {
         GL30.glUniform3uiv(location, value);
     }
 
     @Override
-    public void nglUniform4uiv(int location, int count, long value) {
-        GL30.nglUniform4uiv(location, count, value);
-    }
-
-    @Override
     public void glUniform4uiv(int location, IntBuffer value) {
         GL30.glUniform4uiv(location, value);
-    }
-
-    @Override
-    public void nglGetUniformuiv(int program, int location, long params) {
-        GL30.nglGetUniformuiv(program, location, params);
     }
 
     @Override
@@ -342,11 +222,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglBindFragDataLocation(int program, int colorNumber, long name) {
-        GL30.nglBindFragDataLocation(program, colorNumber, name);
-    }
-
-    @Override
     public void glBindFragDataLocation(int program, int colorNumber, ByteBuffer name) {
         GL30.glBindFragDataLocation(program, colorNumber, name);
     }
@@ -354,11 +229,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glBindFragDataLocation(int program, int colorNumber, CharSequence name) {
         GL30.glBindFragDataLocation(program, colorNumber, name);
-    }
-
-    @Override
-    public int nglGetFragDataLocation(int program, long name) {
-        return GL30.nglGetFragDataLocation(program, name);
     }
 
     @Override
@@ -379,11 +249,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glEndConditionalRender() {
         GL30.glEndConditionalRender();
-    }
-
-    @Override
-    public long nglMapBufferRange(int target, long offset, long length, int access) {
-        return GL30.nglMapBufferRange(target, offset, length, access);
     }
 
     @Override
@@ -417,11 +282,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglDeleteRenderbuffers(int n, long renderbuffers) {
-        GL30.nglDeleteRenderbuffers(n, renderbuffers);
-    }
-
-    @Override
     public void glDeleteRenderbuffers(IntBuffer renderbuffers) {
         GL30.glDeleteRenderbuffers(renderbuffers);
     }
@@ -429,11 +289,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glDeleteRenderbuffers(int renderbuffer) {
         GL30.glDeleteRenderbuffers(renderbuffer);
-    }
-
-    @Override
-    public void nglGenRenderbuffers(int n, long renderbuffers) {
-        GL30.nglGenRenderbuffers(n, renderbuffers);
     }
 
     @Override
@@ -457,11 +312,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglGetRenderbufferParameteriv(int target, int pname, long params) {
-        GL30.nglGetRenderbufferParameteriv(target, pname, params);
-    }
-
-    @Override
     public void glGetRenderbufferParameteriv(int target, int pname, IntBuffer params) {
         GL30.glGetRenderbufferParameteriv(target, pname, params);
     }
@@ -482,11 +332,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglDeleteFramebuffers(int n, long framebuffers) {
-        GL30.nglDeleteFramebuffers(n, framebuffers);
-    }
-
-    @Override
     public void glDeleteFramebuffers(IntBuffer framebuffers) {
         GL30.glDeleteFramebuffers(framebuffers);
     }
@@ -494,11 +339,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glDeleteFramebuffers(int framebuffer) {
         GL30.glDeleteFramebuffers(framebuffer);
-    }
-
-    @Override
-    public void nglGenFramebuffers(int n, long framebuffers) {
-        GL30.nglGenFramebuffers(n, framebuffers);
     }
 
     @Override
@@ -542,11 +382,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, long params) {
-        GL30.nglGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
-    }
-
-    @Override
     public void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, IntBuffer params) {
         GL30.glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
     }
@@ -567,11 +402,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglTexParameterIiv(int target, int pname, long params) {
-        GL30.nglTexParameterIiv(target, pname, params);
-    }
-
-    @Override
     public void glTexParameterIiv(int target, int pname, IntBuffer params) {
         GL30.glTexParameterIiv(target, pname, params);
     }
@@ -579,11 +409,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glTexParameterIi(int target, int pname, int param) {
         GL30.glTexParameterIi(target, pname, param);
-    }
-
-    @Override
-    public void nglTexParameterIuiv(int target, int pname, long params) {
-        GL30.nglTexParameterIuiv(target, pname, params);
     }
 
     @Override
@@ -597,11 +422,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglGetTexParameterIiv(int target, int pname, long params) {
-        GL30.nglGetTexParameterIiv(target, pname, params);
-    }
-
-    @Override
     public void glGetTexParameterIiv(int target, int pname, IntBuffer params) {
         GL30.glGetTexParameterIiv(target, pname, params);
     }
@@ -609,11 +429,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public int glGetTexParameterIi(int target, int pname) {
         return GL30.glGetTexParameterIi(target, pname);
-    }
-
-    @Override
-    public void nglGetTexParameterIuiv(int target, int pname, long params) {
-        GL30.nglGetTexParameterIuiv(target, pname, params);
     }
 
     @Override
@@ -632,11 +447,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglGetBooleani_v(int target, int index, long data) {
-        GL30.nglGetBooleani_v(target, index, data);
-    }
-
-    @Override
     public void glGetBooleani_v(int target, int index, ByteBuffer data) {
         GL30.glGetBooleani_v(target, index, data);
     }
@@ -644,11 +454,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public boolean glGetBooleani(int target, int index) {
         return GL30.glGetBooleani(target, index);
-    }
-
-    @Override
-    public void nglGetIntegeri_v(int target, int index, long data) {
-        GL30.nglGetIntegeri_v(target, index, data);
     }
 
     @Override
@@ -697,11 +502,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglTransformFeedbackVaryings(int program, int count, long varyings, int bufferMode) {
-        GL30.nglTransformFeedbackVaryings(program, count, varyings, bufferMode);
-    }
-
-    @Override
     public void glTransformFeedbackVaryings(int program, CharSequence[] varyings, int bufferMode) {
         GL30.glTransformFeedbackVaryings(program, varyings, bufferMode);
     }
@@ -709,11 +509,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glTransformFeedbackVaryings(int program, CharSequence varying, int bufferMode) {
         GL30.glTransformFeedbackVaryings(program, varying, bufferMode);
-    }
-
-    @Override
-    public void nglGetTransformFeedbackVarying(int program, int index, int bufSize, long length, long size, long type, long name) {
-        GL30.nglGetTransformFeedbackVarying(program, index, bufSize, length, size, type, name);
     }
 
     @Override
@@ -737,11 +532,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     }
 
     @Override
-    public void nglDeleteVertexArrays(int n, long arrays) {
-        GL30.nglDeleteVertexArrays(n, arrays);
-    }
-
-    @Override
     public void glDeleteVertexArrays(IntBuffer arrays) {
         GL30.glDeleteVertexArrays(arrays);
     }
@@ -749,11 +539,6 @@ public class LwjglGL30 extends LwjglGL21 implements GLI30 {
     @Override
     public void glDeleteVertexArrays(int array) {
         GL30.glDeleteVertexArrays(array);
-    }
-
-    @Override
-    public void nglGenVertexArrays(int n, long arrays) {
-        GL30.nglGenVertexArrays(n, arrays);
     }
 
     @Override

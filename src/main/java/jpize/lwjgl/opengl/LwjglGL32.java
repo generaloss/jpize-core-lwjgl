@@ -7,11 +7,6 @@ import java.nio.*;
 public class LwjglGL32 extends LwjglGL31 implements GLI32 {
 
     @Override
-    public void nglGetBufferParameteri64v(int target, int pname, long params) {
-        GL32.nglGetBufferParameteri64v(target, pname, params);
-    }
-
-    @Override
     public void glGetBufferParameteri64v(int target, int pname, LongBuffer params) {
         GL32.glGetBufferParameteri64v(target, pname, params);
     }
@@ -19,11 +14,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     @Override
     public long glGetBufferParameteri64(int target, int pname) {
         return GL32.glGetBufferParameteri64(target, pname);
-    }
-
-    @Override
-    public void nglDrawElementsBaseVertex(int mode, int count, int type, long indices, int basevertex) {
-        GL32.nglDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
     @Override
@@ -52,11 +42,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     }
 
     @Override
-    public void nglDrawRangeElementsBaseVertex(int mode, int start, int end, int count, int type, long indices, int basevertex) {
-        GL32.nglDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
-    }
-
-    @Override
     public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int count, int type, long indices, int basevertex) {
         GL32.glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
     }
@@ -79,11 +64,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     @Override
     public void glDrawRangeElementsBaseVertex(int mode, int start, int end, IntBuffer indices, int basevertex) {
         GL32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
-    }
-
-    @Override
-    public void nglDrawElementsInstancedBaseVertex(int mode, int count, int type, long indices, int primcount, int basevertex) {
-        GL32.nglDrawElementsInstancedBaseVertex(mode, count, type, indices, primcount, basevertex);
     }
 
     @Override
@@ -112,11 +92,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     }
 
     @Override
-    public void nglMultiDrawElementsBaseVertex(int mode, long count, int type, long indices, int drawcount, long basevertex) {
-        GL32.nglMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex);
-    }
-
-    @Override
     public void glProvokingVertex(int mode) {
         GL32.glProvokingVertex(mode);
     }
@@ -129,11 +104,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     @Override
     public void glTexImage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, boolean fixedsamplelocations) {
         GL32.glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
-    }
-
-    @Override
-    public void nglGetMultisamplefv(int pname, int index, long val) {
-        GL32.nglGetMultisamplefv(pname, index, val);
     }
 
     @Override
@@ -162,18 +132,8 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     }
 
     @Override
-    public boolean nglIsSync(long sync) {
-        return GL32.nglIsSync(sync);
-    }
-
-    @Override
     public boolean glIsSync(long sync) {
         return GL32.glIsSync(sync);
-    }
-
-    @Override
-    public void nglDeleteSync(long sync) {
-        GL32.nglDeleteSync(sync);
     }
 
     @Override
@@ -182,28 +142,13 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     }
 
     @Override
-    public int nglClientWaitSync(long sync, int flags, long timeout) {
-        return GL32.nglClientWaitSync(sync, flags, timeout);
-    }
-
-    @Override
     public int glClientWaitSync(long sync, int flags, long timeout) {
         return GL32.glClientWaitSync(sync, flags, timeout);
     }
 
     @Override
-    public void nglWaitSync(long sync, int flags, long timeout) {
-        GL32.nglWaitSync(sync, flags, timeout);
-    }
-
-    @Override
     public void glWaitSync(long sync, int flags, long timeout) {
         GL32.glWaitSync(sync, flags, timeout);
-    }
-
-    @Override
-    public void nglGetInteger64v(int pname, long params) {
-        GL32.nglGetInteger64v(pname, params);
     }
 
     @Override
@@ -217,11 +162,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     }
 
     @Override
-    public void nglGetInteger64i_v(int pname, int index, long params) {
-        GL32.nglGetInteger64i_v(pname, index, params);
-    }
-
-    @Override
     public void glGetInteger64i_v(int pname, int index, LongBuffer params) {
         GL32.glGetInteger64i_v(pname, index, params);
     }
@@ -229,11 +169,6 @@ public class LwjglGL32 extends LwjglGL31 implements GLI32 {
     @Override
     public long glGetInteger64i(int pname, int index) {
         return GL32.glGetInteger64i(pname, index);
-    }
-
-    @Override
-    public void nglGetSynciv(long sync, int pname, int bufSize, long length, long values) {
-        GL32.nglGetSynciv(sync, pname, bufSize, length, values);
     }
 
     @Override

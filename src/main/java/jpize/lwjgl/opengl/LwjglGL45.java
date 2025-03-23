@@ -12,11 +12,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglCreateTransformFeedbacks(int n, long ids) {
-        GL45.nglCreateTransformFeedbacks(n, ids);
-    }
-
-    @Override
     public void glCreateTransformFeedbacks(IntBuffer ids) {
         GL45.glCreateTransformFeedbacks(ids);
     }
@@ -37,11 +32,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetTransformFeedbackiv(int xfb, int pname, long param) {
-        GL45.nglGetTransformFeedbackiv(xfb, pname, param);
-    }
-
-    @Override
     public void glGetTransformFeedbackiv(int xfb, int pname, IntBuffer param) {
         GL45.glGetTransformFeedbackiv(xfb, pname, param);
     }
@@ -49,11 +39,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetTransformFeedbacki(int xfb, int pname) {
         return GL45.glGetTransformFeedbacki(xfb, pname);
-    }
-
-    @Override
-    public void nglGetTransformFeedbacki_v(int xfb, int pname, int index, long param) {
-        GL45.nglGetTransformFeedbacki_v(xfb, pname, index, param);
     }
 
     @Override
@@ -67,11 +52,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetTransformFeedbacki64_v(int xfb, int pname, int index, long param) {
-        GL45.nglGetTransformFeedbacki64_v(xfb, pname, index, param);
-    }
-
-    @Override
     public void glGetTransformFeedbacki64_v(int xfb, int pname, int index, LongBuffer param) {
         GL45.glGetTransformFeedbacki64_v(xfb, pname, index, param);
     }
@@ -82,11 +62,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglCreateBuffers(int n, long buffers) {
-        GL45.nglCreateBuffers(n, buffers);
-    }
-
-    @Override
     public void glCreateBuffers(IntBuffer buffers) {
         GL45.glCreateBuffers(buffers);
     }
@@ -94,11 +69,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glCreateBuffers() {
         return GL45.glCreateBuffers();
-    }
-
-    @Override
-    public void nglNamedBufferStorage(int buffer, long size, long data, int flags) {
-        GL45.nglNamedBufferStorage(buffer, size, data, flags);
     }
 
     @Override
@@ -129,11 +99,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glNamedBufferStorage(int buffer, DoubleBuffer data, int flags) {
         GL45.glNamedBufferStorage(buffer, data, flags);
-    }
-
-    @Override
-    public void nglNamedBufferData(int buffer, long size, long data, int usage) {
-        GL45.nglNamedBufferData(buffer, size, data, usage);
     }
 
     @Override
@@ -172,11 +137,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglNamedBufferSubData(int buffer, long offset, long size, long data) {
-        GL45.nglNamedBufferSubData(buffer, offset, size, data);
-    }
-
-    @Override
     public void glNamedBufferSubData(int buffer, long offset, ByteBuffer data) {
         GL45.glNamedBufferSubData(buffer, offset, data);
     }
@@ -212,11 +172,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglClearNamedBufferData(int buffer, int internalformat, int format, int type, long data) {
-        GL45.nglClearNamedBufferData(buffer, internalformat, format, type, data);
-    }
-
-    @Override
     public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, ByteBuffer data) {
         GL45.glClearNamedBufferData(buffer, internalformat, format, type, data);
     }
@@ -234,11 +189,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, FloatBuffer data) {
         GL45.glClearNamedBufferData(buffer, internalformat, format, type, data);
-    }
-
-    @Override
-    public void nglClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, long data) {
-        GL45.nglClearNamedBufferSubData(buffer, internalformat, offset, size, format, type, data);
     }
 
     @Override
@@ -262,11 +212,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public long nglMapNamedBuffer(int buffer, int access) {
-        return GL45.nglMapNamedBuffer(buffer, access);
-    }
-
-    @Override
     public ByteBuffer glMapNamedBuffer(int buffer, int access) {
         return GL45.glMapNamedBuffer(buffer, access);
     }
@@ -279,11 +224,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public ByteBuffer glMapNamedBuffer(int buffer, int access, long length, ByteBuffer old_buffer) {
         return GL45.glMapNamedBuffer(buffer, access, length, old_buffer);
-    }
-
-    @Override
-    public long nglMapNamedBufferRange(int buffer, long offset, long length, int access) {
-        return GL45.nglMapNamedBufferRange(buffer, offset, length, access);
     }
 
     @Override
@@ -307,11 +247,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetNamedBufferParameteriv(int buffer, int pname, long params) {
-        GL45.nglGetNamedBufferParameteriv(buffer, pname, params);
-    }
-
-    @Override
     public void glGetNamedBufferParameteriv(int buffer, int pname, IntBuffer params) {
         GL45.glGetNamedBufferParameteriv(buffer, pname, params);
     }
@@ -319,11 +254,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetNamedBufferParameteri(int buffer, int pname) {
         return GL45.glGetNamedBufferParameteri(buffer, pname);
-    }
-
-    @Override
-    public void nglGetNamedBufferParameteri64v(int buffer, int pname, long params) {
-        GL45.nglGetNamedBufferParameteri64v(buffer, pname, params);
     }
 
     @Override
@@ -337,18 +267,8 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetNamedBufferPointerv(int buffer, int pname, long params) {
-        GL45.nglGetNamedBufferPointerv(buffer, pname, params);
-    }
-
-    @Override
     public long glGetNamedBufferPointer(int buffer, int pname) {
         return GL45.glGetNamedBufferPointer(buffer, pname);
-    }
-
-    @Override
-    public void nglGetNamedBufferSubData(int buffer, long offset, long size, long data) {
-        GL45.nglGetNamedBufferSubData(buffer, offset, size, data);
     }
 
     @Override
@@ -379,11 +299,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetNamedBufferSubData(int buffer, long offset, DoubleBuffer data) {
         GL45.glGetNamedBufferSubData(buffer, offset, data);
-    }
-
-    @Override
-    public void nglCreateFramebuffers(int n, long framebuffers) {
-        GL45.nglCreateFramebuffers(n, framebuffers);
     }
 
     @Override
@@ -422,11 +337,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglNamedFramebufferDrawBuffers(int framebuffer, int n, long bufs) {
-        GL45.nglNamedFramebufferDrawBuffers(framebuffer, n, bufs);
-    }
-
-    @Override
     public void glNamedFramebufferDrawBuffers(int framebuffer, IntBuffer bufs) {
         GL45.glNamedFramebufferDrawBuffers(framebuffer, bufs);
     }
@@ -442,11 +352,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglInvalidateNamedFramebufferData(int framebuffer, int numAttachments, long attachments) {
-        GL45.nglInvalidateNamedFramebufferData(framebuffer, numAttachments, attachments);
-    }
-
-    @Override
     public void glInvalidateNamedFramebufferData(int framebuffer, IntBuffer attachments) {
         GL45.glInvalidateNamedFramebufferData(framebuffer, attachments);
     }
@@ -454,11 +359,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glInvalidateNamedFramebufferData(int framebuffer, int attachment) {
         GL45.glInvalidateNamedFramebufferData(framebuffer, attachment);
-    }
-
-    @Override
-    public void nglInvalidateNamedFramebufferSubData(int framebuffer, int numAttachments, long attachments, int x, int y, int width, int height) {
-        GL45.nglInvalidateNamedFramebufferSubData(framebuffer, numAttachments, attachments, x, y, width, height);
     }
 
     @Override
@@ -472,28 +372,13 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglClearNamedFramebufferiv(int framebuffer, int buffer, int drawbuffer, long value) {
-        GL45.nglClearNamedFramebufferiv(framebuffer, buffer, drawbuffer, value);
-    }
-
-    @Override
     public void glClearNamedFramebufferiv(int framebuffer, int buffer, int drawbuffer, IntBuffer value) {
         GL45.glClearNamedFramebufferiv(framebuffer, buffer, drawbuffer, value);
     }
 
     @Override
-    public void nglClearNamedFramebufferuiv(int framebuffer, int buffer, int drawbuffer, long value) {
-        GL45.nglClearNamedFramebufferuiv(framebuffer, buffer, drawbuffer, value);
-    }
-
-    @Override
     public void glClearNamedFramebufferuiv(int framebuffer, int buffer, int drawbuffer, IntBuffer value) {
         GL45.glClearNamedFramebufferuiv(framebuffer, buffer, drawbuffer, value);
-    }
-
-    @Override
-    public void nglClearNamedFramebufferfv(int framebuffer, int buffer, int drawbuffer, long value) {
-        GL45.nglClearNamedFramebufferfv(framebuffer, buffer, drawbuffer, value);
     }
 
     @Override
@@ -517,11 +402,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetNamedFramebufferParameteriv(int framebuffer, int pname, long params) {
-        GL45.nglGetNamedFramebufferParameteriv(framebuffer, pname, params);
-    }
-
-    @Override
     public void glGetNamedFramebufferParameteriv(int framebuffer, int pname, IntBuffer params) {
         GL45.glGetNamedFramebufferParameteriv(framebuffer, pname, params);
     }
@@ -532,11 +412,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetNamedFramebufferAttachmentParameteriv(int framebuffer, int attachment, int pname, long params) {
-        GL45.nglGetNamedFramebufferAttachmentParameteriv(framebuffer, attachment, pname, params);
-    }
-
-    @Override
     public void glGetNamedFramebufferAttachmentParameteriv(int framebuffer, int attachment, int pname, IntBuffer params) {
         GL45.glGetNamedFramebufferAttachmentParameteriv(framebuffer, attachment, pname, params);
     }
@@ -544,11 +419,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetNamedFramebufferAttachmentParameteri(int framebuffer, int attachment, int pname) {
         return GL45.glGetNamedFramebufferAttachmentParameteri(framebuffer, attachment, pname);
-    }
-
-    @Override
-    public void nglCreateRenderbuffers(int n, long renderbuffers) {
-        GL45.nglCreateRenderbuffers(n, renderbuffers);
     }
 
     @Override
@@ -572,11 +442,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetNamedRenderbufferParameteriv(int renderbuffer, int pname, long params) {
-        GL45.nglGetNamedRenderbufferParameteriv(renderbuffer, pname, params);
-    }
-
-    @Override
     public void glGetNamedRenderbufferParameteriv(int renderbuffer, int pname, IntBuffer params) {
         GL45.glGetNamedRenderbufferParameteriv(renderbuffer, pname, params);
     }
@@ -584,11 +449,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetNamedRenderbufferParameteri(int renderbuffer, int pname) {
         return GL45.glGetNamedRenderbufferParameteri(renderbuffer, pname);
-    }
-
-    @Override
-    public void nglCreateTextures(int target, int n, long textures) {
-        GL45.nglCreateTextures(target, n, textures);
     }
 
     @Override
@@ -637,11 +497,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglTextureSubImage1D(int texture, int level, int xoffset, int width, int format, int type, long pixels) {
-        GL45.nglTextureSubImage1D(texture, level, xoffset, width, format, type, pixels);
-    }
-
-    @Override
     public void glTextureSubImage1D(int texture, int level, int xoffset, int width, int format, int type, ByteBuffer pixels) {
         GL45.glTextureSubImage1D(texture, level, xoffset, width, format, type, pixels);
     }
@@ -669,11 +524,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glTextureSubImage1D(int texture, int level, int xoffset, int width, int format, int type, DoubleBuffer pixels) {
         GL45.glTextureSubImage1D(texture, level, xoffset, width, format, type, pixels);
-    }
-
-    @Override
-    public void nglTextureSubImage2D(int texture, int level, int xoffset, int yoffset, int width, int height, int format, int type, long pixels) {
-        GL45.nglTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
     @Override
@@ -707,11 +557,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglTextureSubImage3D(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, long pixels) {
-        GL45.nglTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
-    }
-
-    @Override
     public void glTextureSubImage3D(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, ByteBuffer pixels) {
         GL45.glTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
     }
@@ -742,11 +587,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglCompressedTextureSubImage1D(int texture, int level, int xoffset, int width, int format, int imageSize, long data) {
-        GL45.nglCompressedTextureSubImage1D(texture, level, xoffset, width, format, imageSize, data);
-    }
-
-    @Override
     public void glCompressedTextureSubImage1D(int texture, int level, int xoffset, int width, int format, int imageSize, long data) {
         GL45.glCompressedTextureSubImage1D(texture, level, xoffset, width, format, imageSize, data);
     }
@@ -757,11 +597,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglCompressedTextureSubImage2D(int texture, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, long data) {
-        GL45.nglCompressedTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, imageSize, data);
-    }
-
-    @Override
     public void glCompressedTextureSubImage2D(int texture, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, long data) {
         GL45.glCompressedTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, imageSize, data);
     }
@@ -769,11 +604,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glCompressedTextureSubImage2D(int texture, int level, int xoffset, int yoffset, int width, int height, int format, ByteBuffer data) {
         GL45.glCompressedTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, data);
-    }
-
-    @Override
-    public void nglCompressedTextureSubImage3D(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int imageSize, long data) {
-        GL45.nglCompressedTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
     }
 
     @Override
@@ -807,11 +637,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglTextureParameterfv(int texture, int pname, long params) {
-        GL45.nglTextureParameterfv(texture, pname, params);
-    }
-
-    @Override
     public void glTextureParameterfv(int texture, int pname, FloatBuffer params) {
         GL45.glTextureParameterfv(texture, pname, params);
     }
@@ -819,11 +644,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glTextureParameteri(int texture, int pname, int param) {
         GL45.glTextureParameteri(texture, pname, param);
-    }
-
-    @Override
-    public void nglTextureParameterIiv(int texture, int pname, long params) {
-        GL45.nglTextureParameterIiv(texture, pname, params);
     }
 
     @Override
@@ -837,11 +657,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglTextureParameterIuiv(int texture, int pname, long params) {
-        GL45.nglTextureParameterIuiv(texture, pname, params);
-    }
-
-    @Override
     public void glTextureParameterIuiv(int texture, int pname, IntBuffer params) {
         GL45.glTextureParameterIuiv(texture, pname, params);
     }
@@ -849,11 +664,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glTextureParameterIui(int texture, int pname, int param) {
         GL45.glTextureParameterIui(texture, pname, param);
-    }
-
-    @Override
-    public void nglTextureParameteriv(int texture, int pname, long params) {
-        GL45.nglTextureParameteriv(texture, pname, params);
     }
 
     @Override
@@ -869,11 +679,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glBindTextureUnit(int unit, int texture) {
         GL45.glBindTextureUnit(unit, texture);
-    }
-
-    @Override
-    public void nglGetTextureImage(int texture, int level, int format, int type, int bufSize, long pixels) {
-        GL45.nglGetTextureImage(texture, level, format, type, bufSize, pixels);
     }
 
     @Override
@@ -907,11 +712,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetCompressedTextureImage(int texture, int level, int bufSize, long pixels) {
-        GL45.nglGetCompressedTextureImage(texture, level, bufSize, pixels);
-    }
-
-    @Override
     public void glGetCompressedTextureImage(int texture, int level, int bufSize, long pixels) {
         GL45.glGetCompressedTextureImage(texture, level, bufSize, pixels);
     }
@@ -919,11 +719,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetCompressedTextureImage(int texture, int level, ByteBuffer pixels) {
         GL45.glGetCompressedTextureImage(texture, level, pixels);
-    }
-
-    @Override
-    public void nglGetTextureLevelParameterfv(int texture, int level, int pname, long params) {
-        GL45.nglGetTextureLevelParameterfv(texture, level, pname, params);
     }
 
     @Override
@@ -937,11 +732,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetTextureLevelParameteriv(int texture, int level, int pname, long params) {
-        GL45.nglGetTextureLevelParameteriv(texture, level, pname, params);
-    }
-
-    @Override
     public void glGetTextureLevelParameteriv(int texture, int level, int pname, IntBuffer params) {
         GL45.glGetTextureLevelParameteriv(texture, level, pname, params);
     }
@@ -949,11 +739,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetTextureLevelParameteri(int texture, int level, int pname) {
         return GL45.glGetTextureLevelParameteri(texture, level, pname);
-    }
-
-    @Override
-    public void nglGetTextureParameterfv(int texture, int pname, long params) {
-        GL45.nglGetTextureParameterfv(texture, pname, params);
     }
 
     @Override
@@ -967,11 +752,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetTextureParameterIiv(int texture, int pname, long params) {
-        GL45.nglGetTextureParameterIiv(texture, pname, params);
-    }
-
-    @Override
     public void glGetTextureParameterIiv(int texture, int pname, IntBuffer params) {
         GL45.glGetTextureParameterIiv(texture, pname, params);
     }
@@ -979,11 +759,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetTextureParameterIi(int texture, int pname) {
         return GL45.glGetTextureParameterIi(texture, pname);
-    }
-
-    @Override
-    public void nglGetTextureParameterIuiv(int texture, int pname, long params) {
-        GL45.nglGetTextureParameterIuiv(texture, pname, params);
     }
 
     @Override
@@ -997,11 +772,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetTextureParameteriv(int texture, int pname, long params) {
-        GL45.nglGetTextureParameteriv(texture, pname, params);
-    }
-
-    @Override
     public void glGetTextureParameteriv(int texture, int pname, IntBuffer params) {
         GL45.glGetTextureParameteriv(texture, pname, params);
     }
@@ -1009,11 +779,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetTextureParameteri(int texture, int pname) {
         return GL45.glGetTextureParameteri(texture, pname);
-    }
-
-    @Override
-    public void nglCreateVertexArrays(int n, long arrays) {
-        GL45.nglCreateVertexArrays(n, arrays);
     }
 
     @Override
@@ -1047,11 +812,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglVertexArrayVertexBuffers(int vaobj, int first, int count, long buffers, long offsets, long strides) {
-        GL45.nglVertexArrayVertexBuffers(vaobj, first, count, buffers, offsets, strides);
-    }
-
-    @Override
     public void glVertexArrayAttribFormat(int vaobj, int attribindex, int size, int type, boolean normalized, int relativeoffset) {
         GL45.glVertexArrayAttribFormat(vaobj, attribindex, size, type, normalized, relativeoffset);
     }
@@ -1077,11 +837,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetVertexArrayiv(int vaobj, int pname, long param) {
-        GL45.nglGetVertexArrayiv(vaobj, pname, param);
-    }
-
-    @Override
     public void glGetVertexArrayiv(int vaobj, int pname, IntBuffer param) {
         GL45.glGetVertexArrayiv(vaobj, pname, param);
     }
@@ -1089,11 +844,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetVertexArrayi(int vaobj, int pname) {
         return GL45.glGetVertexArrayi(vaobj, pname);
-    }
-
-    @Override
-    public void nglGetVertexArrayIndexediv(int vaobj, int index, int pname, long param) {
-        GL45.nglGetVertexArrayIndexediv(vaobj, index, pname, param);
     }
 
     @Override
@@ -1107,11 +857,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetVertexArrayIndexed64iv(int vaobj, int index, int pname, long param) {
-        GL45.nglGetVertexArrayIndexed64iv(vaobj, index, pname, param);
-    }
-
-    @Override
     public void glGetVertexArrayIndexed64iv(int vaobj, int index, int pname, LongBuffer param) {
         GL45.glGetVertexArrayIndexed64iv(vaobj, index, pname, param);
     }
@@ -1119,11 +864,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public long glGetVertexArrayIndexed64i(int vaobj, int index, int pname) {
         return GL45.glGetVertexArrayIndexed64i(vaobj, index, pname);
-    }
-
-    @Override
-    public void nglCreateSamplers(int n, long samplers) {
-        GL45.nglCreateSamplers(n, samplers);
     }
 
     @Override
@@ -1137,11 +877,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglCreateProgramPipelines(int n, long pipelines) {
-        GL45.nglCreateProgramPipelines(n, pipelines);
-    }
-
-    @Override
     public void glCreateProgramPipelines(IntBuffer pipelines) {
         GL45.glCreateProgramPipelines(pipelines);
     }
@@ -1149,11 +884,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glCreateProgramPipelines() {
         return GL45.glCreateProgramPipelines();
-    }
-
-    @Override
-    public void nglCreateQueries(int target, int n, long ids) {
-        GL45.nglCreateQueries(target, n, ids);
     }
 
     @Override
@@ -1192,11 +922,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, int bufSize, long pixels) {
-        GL45.nglGetTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bufSize, pixels);
-    }
-
-    @Override
     public void glGetTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, int bufSize, long pixels) {
         GL45.glGetTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bufSize, pixels);
     }
@@ -1224,11 +949,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, DoubleBuffer pixels) {
         GL45.glGetTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
-    }
-
-    @Override
-    public void nglGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int bufSize, long pixels) {
-        GL45.nglGetCompressedTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, bufSize, pixels);
     }
 
     @Override
@@ -1272,11 +992,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnMapdv(int var0, int var1, int var2, long var3) {
-        GL45.nglGetnMapdv(var0, var1, var2, var3);
-    }
-
-    @Override
     public void glGetnMapdv(int target, int query, DoubleBuffer data) {
         GL45.glGetnMapdv(target, query, data);
     }
@@ -1284,11 +999,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public double glGetnMapd(int target, int query) {
         return GL45.glGetnMapd(target, query);
-    }
-
-    @Override
-    public void nglGetnMapfv(int var0, int var1, int var2, long var3) {
-        GL45.nglGetnMapfv(var0, var1, var2, var3);
     }
 
     @Override
@@ -1302,11 +1012,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnMapiv(int var0, int var1, int var2, long var3) {
-        GL45.nglGetnMapiv(var0, var1, var2, var3);
-    }
-
-    @Override
     public void glGetnMapiv(int target, int query, IntBuffer data) {
         GL45.glGetnMapiv(target, query, data);
     }
@@ -1317,18 +1022,8 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnPixelMapfv(int var0, int var1, long var2) {
-        GL45.nglGetnPixelMapfv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetnPixelMapfv(int map, FloatBuffer data) {
         GL45.glGetnPixelMapfv(map, data);
-    }
-
-    @Override
-    public void nglGetnPixelMapuiv(int var0, int var1, long var2) {
-        GL45.nglGetnPixelMapuiv(var0, var1, var2);
     }
 
     @Override
@@ -1337,18 +1032,8 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnPixelMapusv(int var0, int var1, long var2) {
-        GL45.nglGetnPixelMapusv(var0, var1, var2);
-    }
-
-    @Override
     public void glGetnPixelMapusv(int map, ShortBuffer data) {
         GL45.glGetnPixelMapusv(map, data);
-    }
-
-    @Override
-    public void nglGetnPolygonStipple(int var0, long var1) {
-        GL45.nglGetnPolygonStipple(var0, var1);
     }
 
     @Override
@@ -1359,11 +1044,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetnPolygonStipple(ByteBuffer pattern) {
         GL45.glGetnPolygonStipple(pattern);
-    }
-
-    @Override
-    public void nglGetnTexImage(int tex, int level, int format, int type, int bufSize, long img) {
-        GL45.nglGetnTexImage(tex, level, format, type, bufSize, img);
     }
 
     @Override
@@ -1397,11 +1077,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglReadnPixels(int x, int y, int width, int height, int format, int type, int bufSize, long pixels) {
-        GL45.nglReadnPixels(x, y, width, height, format, type, bufSize, pixels);
-    }
-
-    @Override
     public void glReadnPixels(int x, int y, int width, int height, int format, int type, int bufSize, long pixels) {
         GL45.glReadnPixels(x, y, width, height, format, type, bufSize, pixels);
     }
@@ -1424,11 +1099,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glReadnPixels(int x, int y, int width, int height, int format, int type, FloatBuffer pixels) {
         GL45.glReadnPixels(x, y, width, height, format, type, pixels);
-    }
-
-    @Override
-    public void nglGetnColorTable(int var0, int var1, int var2, int var3, long var4) {
-        GL45.nglGetnColorTable(var0, var1, var2, var3, var4);
     }
 
     @Override
@@ -1457,11 +1127,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnConvolutionFilter(int var0, int var1, int var2, int var3, long var4) {
-        GL45.nglGetnConvolutionFilter(var0, var1, var2, var3, var4);
-    }
-
-    @Override
     public void glGetnConvolutionFilter(int target, int format, int type, int bufSize, long image) {
         GL45.glGetnConvolutionFilter(target, format, type, bufSize, image);
     }
@@ -1469,11 +1134,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetnConvolutionFilter(int target, int format, int type, ByteBuffer image) {
         GL45.glGetnConvolutionFilter(target, format, type, image);
-    }
-
-    @Override
-    public void nglGetnSeparableFilter(int var0, int var1, int var2, int var3, long var4, int var6, long var7, long var9) {
-        GL45.nglGetnSeparableFilter(var0, var1, var2, var3, var4, var6, var7, var9);
     }
 
     @Override
@@ -1487,11 +1147,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnHistogram(int var0, boolean var1, int var2, int var3, int var4, long var5) {
-        GL45.nglGetnHistogram(var0, var1, var2, var3, var4, var5);
-    }
-
-    @Override
     public void glGetnHistogram(int target, boolean reset, int format, int type, int bufSize, long values) {
         GL45.glGetnHistogram(target, reset, format, type, bufSize, values);
     }
@@ -1499,11 +1154,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetnHistogram(int target, boolean reset, int format, int type, ByteBuffer values) {
         GL45.glGetnHistogram(target, reset, format, type, values);
-    }
-
-    @Override
-    public void nglGetnMinmax(int var0, boolean var1, int var2, int var3, int var4, long var5) {
-        GL45.nglGetnMinmax(var0, var1, var2, var3, var4, var5);
     }
 
     @Override
@@ -1517,11 +1167,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnCompressedTexImage(int target, int level, int bufSize, long img) {
-        GL45.nglGetnCompressedTexImage(target, level, bufSize, img);
-    }
-
-    @Override
     public void glGetnCompressedTexImage(int target, int level, int bufSize, long img) {
         GL45.glGetnCompressedTexImage(target, level, bufSize, img);
     }
@@ -1529,11 +1174,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public void glGetnCompressedTexImage(int target, int level, ByteBuffer img) {
         GL45.glGetnCompressedTexImage(target, level, img);
-    }
-
-    @Override
-    public void nglGetnUniformfv(int program, int location, int bufSize, long params) {
-        GL45.nglGetnUniformfv(program, location, bufSize, params);
     }
 
     @Override
@@ -1547,11 +1187,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnUniformdv(int program, int location, int bufSize, long params) {
-        GL45.nglGetnUniformdv(program, location, bufSize, params);
-    }
-
-    @Override
     public void glGetnUniformdv(int program, int location, DoubleBuffer params) {
         GL45.glGetnUniformdv(program, location, params);
     }
@@ -1562,11 +1197,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     }
 
     @Override
-    public void nglGetnUniformiv(int program, int location, int bufSize, long params) {
-        GL45.nglGetnUniformiv(program, location, bufSize, params);
-    }
-
-    @Override
     public void glGetnUniformiv(int program, int location, IntBuffer params) {
         GL45.glGetnUniformiv(program, location, params);
     }
@@ -1574,11 +1204,6 @@ public class LwjglGL45 extends LwjglGL44 implements GLI45 {
     @Override
     public int glGetnUniformi(int program, int location) {
         return GL45.glGetnUniformi(program, location);
-    }
-
-    @Override
-    public void nglGetnUniformuiv(int program, int location, int bufSize, long params) {
-        GL45.nglGetnUniformuiv(program, location, bufSize, params);
     }
 
     @Override

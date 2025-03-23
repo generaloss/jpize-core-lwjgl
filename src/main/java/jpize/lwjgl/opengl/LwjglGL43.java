@@ -7,11 +7,6 @@ import java.nio.*;
 public class LwjglGL43 extends LwjglGL42 implements GLI43 {
 
     @Override
-    public void nglClearBufferData(int target, int internalformat, int format, int type, long data) {
-        GL43.nglClearBufferData(target, internalformat, format, type, data);
-    }
-
-    @Override
     public void glClearBufferData(int target, int internalformat, int format, int type, ByteBuffer data) {
         GL43.glClearBufferData(target, internalformat, format, type, data);
     }
@@ -29,11 +24,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public void glClearBufferData(int target, int internalformat, int format, int type, FloatBuffer data) {
         GL43.glClearBufferData(target, internalformat, format, type, data);
-    }
-
-    @Override
-    public void nglClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, long data) {
-        GL43.nglClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
     @Override
@@ -72,11 +62,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglDebugMessageControl(int source, int type, int severity, int count, long ids, boolean enabled) {
-        GL43.nglDebugMessageControl(source, type, severity, count, ids, enabled);
-    }
-
-    @Override
     public void glDebugMessageControl(int source, int type, int severity, IntBuffer ids, boolean enabled) {
         GL43.glDebugMessageControl(source, type, severity, ids, enabled);
     }
@@ -84,11 +69,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public void glDebugMessageControl(int source, int type, int severity, int id, boolean enabled) {
         GL43.glDebugMessageControl(source, type, severity, id, enabled);
-    }
-
-    @Override
-    public void nglDebugMessageInsert(int source, int type, int id, int severity, int length, long message) {
-        GL43.nglDebugMessageInsert(source, type, id, severity, length, message);
     }
 
     @Override
@@ -102,28 +82,13 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglDebugMessageCallback(long callback, long userParam) {
-        GL43.nglDebugMessageCallback(callback, userParam);
-    }
-
-    @Override
     public void glDebugMessageCallback(GLDebugMessageCallback callback, long userParam) {
         GL43.glDebugMessageCallback(callback::invoke, userParam);
     }
 
     @Override
-    public int nglGetDebugMessageLog(int count, int bufsize, long sources, long types, long ids, long severities, long lengths, long messageLog) {
-        return GL43.nglGetDebugMessageLog(count, bufsize, sources, types, ids, severities, lengths, messageLog);
-    }
-
-    @Override
     public int glGetDebugMessageLog(int count, IntBuffer sources, IntBuffer types, IntBuffer ids, IntBuffer severities, IntBuffer lengths, ByteBuffer messageLog) {
         return GL43.glGetDebugMessageLog(count, sources, types, ids, severities, lengths, messageLog);
-    }
-
-    @Override
-    public void nglPushDebugGroup(int source, int id, int length, long message) {
-        GL43.nglPushDebugGroup(source, id, length, message);
     }
 
     @Override
@@ -142,11 +107,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglObjectLabel(int identifier, int name, int length, long label) {
-        GL43.nglObjectLabel(identifier, name, length, label);
-    }
-
-    @Override
     public void glObjectLabel(int identifier, int name, ByteBuffer label) {
         GL43.glObjectLabel(identifier, name, label);
     }
@@ -154,11 +114,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public void glObjectLabel(int identifier, int name, CharSequence label) {
         GL43.glObjectLabel(identifier, name, label);
-    }
-
-    @Override
-    public void nglGetObjectLabel(int identifier, int name, int bufSize, long length, long label) {
-        GL43.nglGetObjectLabel(identifier, name, bufSize, length, label);
     }
 
     @Override
@@ -177,11 +132,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglObjectPtrLabel(long ptr, int length, long label) {
-        GL43.nglObjectPtrLabel(ptr, length, label);
-    }
-
-    @Override
     public void glObjectPtrLabel(long ptr, ByteBuffer label) {
         GL43.glObjectPtrLabel(ptr, label);
     }
@@ -189,11 +139,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public void glObjectPtrLabel(long ptr, CharSequence label) {
         GL43.glObjectPtrLabel(ptr, label);
-    }
-
-    @Override
-    public void nglGetObjectPtrLabel(long ptr, int bufSize, long length, long label) {
-        GL43.nglGetObjectPtrLabel(ptr, bufSize, length, label);
     }
 
     @Override
@@ -217,11 +162,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglGetFramebufferParameteriv(int target, int pname, long params) {
-        GL43.nglGetFramebufferParameteriv(target, pname, params);
-    }
-
-    @Override
     public void glGetFramebufferParameteriv(int target, int pname, IntBuffer params) {
         GL43.glGetFramebufferParameteriv(target, pname, params);
     }
@@ -229,11 +169,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public int glGetFramebufferParameteri(int target, int pname) {
         return GL43.glGetFramebufferParameteri(target, pname);
-    }
-
-    @Override
-    public void nglGetInternalformati64v(int target, int internalformat, int pname, int bufSize, long params) {
-        GL43.nglGetInternalformati64v(target, internalformat, pname, bufSize, params);
     }
 
     @Override
@@ -267,11 +202,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglInvalidateFramebuffer(int target, int numAttachments, long attachments) {
-        GL43.nglInvalidateFramebuffer(target, numAttachments, attachments);
-    }
-
-    @Override
     public void glInvalidateFramebuffer(int target, IntBuffer attachments) {
         GL43.glInvalidateFramebuffer(target, attachments);
     }
@@ -282,11 +212,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglInvalidateSubFramebuffer(int target, int numAttachments, long attachments, int x, int y, int width, int height) {
-        GL43.nglInvalidateSubFramebuffer(target, numAttachments, attachments, x, y, width, height);
-    }
-
-    @Override
     public void glInvalidateSubFramebuffer(int target, IntBuffer attachments, int x, int y, int width, int height) {
         GL43.glInvalidateSubFramebuffer(target, attachments, x, y, width, height);
     }
@@ -294,11 +219,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public void glInvalidateSubFramebuffer(int target, int attachment, int x, int y, int width, int height) {
         GL43.glInvalidateSubFramebuffer(target, attachment, x, y, width, height);
-    }
-
-    @Override
-    public void nglMultiDrawArraysIndirect(int mode, long indirect, int drawcount, int stride) {
-        GL43.nglMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
     }
 
     @Override
@@ -317,11 +237,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglMultiDrawElementsIndirect(int mode, int type, long indirect, int drawcount, int stride) {
-        GL43.nglMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
-    }
-
-    @Override
     public void glMultiDrawElementsIndirect(int mode, int type, ByteBuffer indirect, int drawcount, int stride) {
         GL43.glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
     }
@@ -337,11 +252,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglGetProgramInterfaceiv(int program, int programInterface, int pname, long params) {
-        GL43.nglGetProgramInterfaceiv(program, programInterface, pname, params);
-    }
-
-    @Override
     public void glGetProgramInterfaceiv(int program, int programInterface, int pname, IntBuffer params) {
         GL43.glGetProgramInterfaceiv(program, programInterface, pname, params);
     }
@@ -352,11 +262,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public int nglGetProgramResourceIndex(int program, int programInterface, long name) {
-        return GL43.nglGetProgramResourceIndex(program, programInterface, name);
-    }
-
-    @Override
     public int glGetProgramResourceIndex(int program, int programInterface, ByteBuffer name) {
         return GL43.glGetProgramResourceIndex(program, programInterface, name);
     }
@@ -364,11 +269,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public int glGetProgramResourceIndex(int program, int programInterface, CharSequence name) {
         return GL43.glGetProgramResourceIndex(program, programInterface, name);
-    }
-
-    @Override
-    public void nglGetProgramResourceName(int program, int programInterface, int index, int bufSize, long length, long name) {
-        GL43.nglGetProgramResourceName(program, programInterface, index, bufSize, length, name);
     }
 
     @Override
@@ -387,18 +287,8 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     }
 
     @Override
-    public void nglGetProgramResourceiv(int program, int programInterface, int index, int propCount, long props, int bufSize, long length, long params) {
-        GL43.nglGetProgramResourceiv(program, programInterface, index, propCount, props, bufSize, length, params);
-    }
-
-    @Override
     public void glGetProgramResourceiv(int program, int programInterface, int index, IntBuffer props, IntBuffer length, IntBuffer params) {
         GL43.glGetProgramResourceiv(program, programInterface, index, props, length, params);
-    }
-
-    @Override
-    public int nglGetProgramResourceLocation(int program, int programInterface, long name) {
-        return GL43.nglGetProgramResourceLocation(program, programInterface, name);
     }
 
     @Override
@@ -409,11 +299,6 @@ public class LwjglGL43 extends LwjglGL42 implements GLI43 {
     @Override
     public int glGetProgramResourceLocation(int program, int programInterface, CharSequence name) {
         return GL43.glGetProgramResourceLocation(program, programInterface, name);
-    }
-
-    @Override
-    public int nglGetProgramResourceLocationIndex(int program, int programInterface, long name) {
-        return GL43.nglGetProgramResourceLocationIndex(program, programInterface, name);
     }
 
     @Override

@@ -12,11 +12,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     }
 
     @Override
-    public void nglDrawElementsInstanced(int mode, int count, int type, long indices, int primcount) {
-        GL31.nglDrawElementsInstanced(mode, count, type, indices, primcount);
-    }
-
-    @Override
     public void glDrawElementsInstanced(int mode, int count, int type, long indices, int primcount) {
         GL31.glDrawElementsInstanced(mode, count, type, indices, primcount);
     }
@@ -57,11 +52,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     }
 
     @Override
-    public void nglGetUniformIndices(int program, int uniformCount, long uniformNames, long uniformIndices) {
-        GL31.nglGetUniformIndices(program, uniformCount, uniformNames, uniformIndices);
-    }
-
-    @Override
     public void glGetUniformIndices(int program, CharSequence[] uniformNames, IntBuffer uniformIndices) {
         GL31.glGetUniformIndices(program, uniformNames, uniformIndices);
     }
@@ -72,11 +62,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     }
 
     @Override
-    public void nglGetActiveUniformsiv(int program, int uniformCount, long uniformIndices, int pname, long params) {
-        GL31.nglGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, params);
-    }
-
-    @Override
     public void glGetActiveUniformsiv(int program, IntBuffer uniformIndices, int pname, IntBuffer params) {
         GL31.glGetActiveUniformsiv(program, uniformIndices, pname, params);
     }
@@ -84,11 +69,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     @Override
     public int glGetActiveUniformsi(int program, int uniformIndex, int pname) {
         return GL31.glGetActiveUniformsi(program, uniformIndex, pname);
-    }
-
-    @Override
-    public void nglGetActiveUniformName(int program, int uniformIndex, int bufSize, long length, long uniformName) {
-        GL31.nglGetActiveUniformName(program, uniformIndex, bufSize, length, uniformName);
     }
 
     @Override
@@ -107,11 +87,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     }
 
     @Override
-    public int nglGetUniformBlockIndex(int program, long uniformBlockName) {
-        return GL31.nglGetUniformBlockIndex(program, uniformBlockName);
-    }
-
-    @Override
     public int glGetUniformBlockIndex(int program, ByteBuffer uniformBlockName) {
         return GL31.glGetUniformBlockIndex(program, uniformBlockName);
     }
@@ -122,11 +97,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     }
 
     @Override
-    public void nglGetActiveUniformBlockiv(int program, int uniformBlockIndex, int pname, long params) {
-        GL31.nglGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
-    }
-
-    @Override
     public void glGetActiveUniformBlockiv(int program, int uniformBlockIndex, int pname, IntBuffer params) {
         GL31.glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
     }
@@ -134,11 +104,6 @@ public class LwjglGL31 extends LwjglGL30 implements GLI31 {
     @Override
     public int glGetActiveUniformBlocki(int program, int uniformBlockIndex, int pname) {
         return GL31.glGetActiveUniformBlocki(program, uniformBlockIndex, pname);
-    }
-
-    @Override
-    public void nglGetActiveUniformBlockName(int program, int uniformBlockIndex, int bufSize, long length, long uniformBlockName) {
-        GL31.nglGetActiveUniformBlockName(program, uniformBlockIndex, bufSize, length, uniformBlockName);
     }
 
     @Override

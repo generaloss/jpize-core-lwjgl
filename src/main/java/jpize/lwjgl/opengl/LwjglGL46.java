@@ -7,11 +7,6 @@ import java.nio.*;
 public class LwjglGL46 extends LwjglGL45 implements GLI46 {
 
     @Override
-    public void nglMultiDrawArraysIndirectCount(int mode, long indirect, long drawcount, int maxdrawcount, int stride) {
-        GL46.nglMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
-    }
-
-    @Override
     public void glMultiDrawArraysIndirectCount(int mode, ByteBuffer indirect, long drawcount, int maxdrawcount, int stride) {
         GL46.glMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
     }
@@ -24,11 +19,6 @@ public class LwjglGL46 extends LwjglGL45 implements GLI46 {
     @Override
     public void glMultiDrawArraysIndirectCount(int mode, IntBuffer indirect, long drawcount, int maxdrawcount, int stride) {
         GL46.glMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
-    }
-
-    @Override
-    public void nglMultiDrawElementsIndirectCount(int mode, int type, long indirect, long drawcount, int maxdrawcount, int stride) {
-        GL46.nglMultiDrawElementsIndirectCount(mode, type, indirect, drawcount, maxdrawcount, stride);
     }
 
     @Override
@@ -49,11 +39,6 @@ public class LwjglGL46 extends LwjglGL45 implements GLI46 {
     @Override
     public void glPolygonOffsetClamp(float factor, float units, float clamp) {
         GL46.glPolygonOffsetClamp(factor, units, clamp);
-    }
-
-    @Override
-    public void nglSpecializeShader(int shader, long pEntryPoint, int numSpecializationConstants, long pConstantIndex, long pConstantValue) {
-        GL46.nglSpecializeShader(shader, pEntryPoint, numSpecializationConstants, pConstantIndex, pConstantValue);
     }
 
     @Override

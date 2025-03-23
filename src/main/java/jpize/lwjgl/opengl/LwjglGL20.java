@@ -47,11 +47,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglShaderSource(int shader, int count, long strings, long length) {
-        GL20.nglShaderSource(shader, count, strings, length);
-    }
-
-    @Override
     public void glShaderSource(int shader, CharSequence... strings) {
         GL20.glShaderSource(shader, strings);
     }
@@ -122,18 +117,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglUniform1fv(int location, int count, long value) {
-        GL20.nglUniform1fv(location, count, value);
-    }
-
-    @Override
     public void glUniform1fv(int location, FloatBuffer value) {
         GL20.glUniform1fv(location, value);
-    }
-
-    @Override
-    public void nglUniform2fv(int location, int count, long value) {
-        GL20.nglUniform2fv(location, count, value);
     }
 
     @Override
@@ -142,18 +127,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglUniform3fv(int location, int count, long value) {
-        GL20.nglUniform3fv(location, count, value);
-    }
-
-    @Override
     public void glUniform3fv(int location, FloatBuffer value) {
         GL20.glUniform3fv(location, value);
-    }
-
-    @Override
-    public void nglUniform4fv(int location, int count, long value) {
-        GL20.nglUniform4fv(location, count, value);
     }
 
     @Override
@@ -162,18 +137,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglUniform1iv(int location, int count, long value) {
-        GL20.nglUniform1iv(location, count, value);
-    }
-
-    @Override
     public void glUniform1iv(int location, IntBuffer value) {
         GL20.glUniform1iv(location, value);
-    }
-
-    @Override
-    public void nglUniform2iv(int location, int count, long value) {
-        GL20.nglUniform2iv(location, count, value);
     }
 
     @Override
@@ -182,18 +147,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglUniform3iv(int location, int count, long value) {
-        GL20.nglUniform3iv(location, count, value);
-    }
-
-    @Override
     public void glUniform3iv(int location, IntBuffer value) {
         GL20.glUniform3iv(location, value);
-    }
-
-    @Override
-    public void nglUniform4iv(int location, int count, long value) {
-        GL20.nglUniform4iv(location, count, value);
     }
 
     @Override
@@ -202,18 +157,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglUniformMatrix2fv(int location, int count, boolean transpose, long value) {
-        GL20.nglUniformMatrix2fv(location, count, transpose, value);
-    }
-
-    @Override
     public void glUniformMatrix2fv(int location, boolean transpose, FloatBuffer value) {
         GL20.glUniformMatrix2fv(location, transpose, value);
-    }
-
-    @Override
-    public void nglUniformMatrix3fv(int location, int count, boolean transpose, long value) {
-        GL20.nglUniformMatrix3fv(location, count, transpose, value);
     }
 
     @Override
@@ -222,18 +167,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglUniformMatrix4fv(int location, int count, boolean transpose, long value) {
-        GL20.nglUniformMatrix4fv(location, count, transpose, value);
-    }
-
-    @Override
     public void glUniformMatrix4fv(int location, boolean transpose, FloatBuffer value) {
         GL20.glUniformMatrix4fv(location, transpose, value);
-    }
-
-    @Override
-    public void nglGetShaderiv(int shader, int pname, long params) {
-        GL20.nglGetShaderiv(shader, pname, params);
     }
 
     @Override
@@ -247,11 +182,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetProgramiv(int program, int pname, long params) {
-        GL20.nglGetProgramiv(program, pname, params);
-    }
-
-    @Override
     public void glGetProgramiv(int program, int pname, IntBuffer params) {
         GL20.glGetProgramiv(program, pname, params);
     }
@@ -259,11 +189,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     @Override
     public int glGetProgrami(int program, int pname) {
         return GL20.glGetProgrami(program, pname);
-    }
-
-    @Override
-    public void nglGetShaderInfoLog(int shader, int maxLength, long length, long infoLog) {
-        GL20.nglGetShaderInfoLog(shader, maxLength, length, infoLog);
     }
 
     @Override
@@ -282,11 +207,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetProgramInfoLog(int program, int maxLength, long length, long infoLog) {
-        GL20.nglGetProgramInfoLog(program, maxLength, length, infoLog);
-    }
-
-    @Override
     public void glGetProgramInfoLog(int program, IntBuffer length, ByteBuffer infoLog) {
         GL20.glGetProgramInfoLog(program, length, infoLog);
     }
@@ -302,18 +222,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetAttachedShaders(int program, int maxCount, long count, long shaders) {
-        GL20.nglGetAttachedShaders(program, maxCount, count, shaders);
-    }
-
-    @Override
     public void glGetAttachedShaders(int program, IntBuffer count, IntBuffer shaders) {
         GL20.glGetAttachedShaders(program, count, shaders);
-    }
-
-    @Override
-    public int nglGetUniformLocation(int program, long name) {
-        return GL20.nglGetUniformLocation(program, name);
     }
 
     @Override
@@ -324,11 +234,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     @Override
     public int glGetUniformLocation(int program, CharSequence name) {
         return GL20.glGetUniformLocation(program, name);
-    }
-
-    @Override
-    public void nglGetActiveUniform(int program, int index, int maxLength, long length, long size, long type, long name) {
-        GL20.nglGetActiveUniform(program, index, maxLength, length, size, type, name);
     }
 
     @Override
@@ -347,11 +252,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetUniformfv(int program, int location, long params) {
-        GL20.nglGetUniformfv(program, location, params);
-    }
-
-    @Override
     public void glGetUniformfv(int program, int location, FloatBuffer params) {
         GL20.glGetUniformfv(program, location, params);
     }
@@ -362,11 +262,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetUniformiv(int program, int location, long params) {
-        GL20.nglGetUniformiv(program, location, params);
-    }
-
-    @Override
     public void glGetUniformiv(int program, int location, IntBuffer params) {
         GL20.glGetUniformiv(program, location, params);
     }
@@ -374,11 +269,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     @Override
     public int glGetUniformi(int program, int location) {
         return GL20.glGetUniformi(program, location);
-    }
-
-    @Override
-    public void nglGetShaderSource(int shader, int maxLength, long length, long source) {
-        GL20.nglGetShaderSource(shader, maxLength, length, source);
     }
 
     @Override
@@ -462,18 +352,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib1fv(int index, long v) {
-        GL20.nglVertexAttrib1fv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib1fv(int index, FloatBuffer v) {
         GL20.glVertexAttrib1fv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib1sv(int index, long v) {
-        GL20.nglVertexAttrib1sv(index, v);
     }
 
     @Override
@@ -482,18 +362,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib1dv(int index, long v) {
-        GL20.nglVertexAttrib1dv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib1dv(int index, DoubleBuffer v) {
         GL20.glVertexAttrib1dv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib2fv(int index, long v) {
-        GL20.nglVertexAttrib2fv(index, v);
     }
 
     @Override
@@ -502,18 +372,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib2sv(int index, long v) {
-        GL20.nglVertexAttrib2sv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib2sv(int index, ShortBuffer v) {
         GL20.glVertexAttrib2sv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib2dv(int index, long v) {
-        GL20.nglVertexAttrib2dv(index, v);
     }
 
     @Override
@@ -522,18 +382,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib3fv(int index, long v) {
-        GL20.nglVertexAttrib3fv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib3fv(int index, FloatBuffer v) {
         GL20.glVertexAttrib3fv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib3sv(int index, long v) {
-        GL20.nglVertexAttrib3sv(index, v);
     }
 
     @Override
@@ -542,18 +392,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib3dv(int index, long v) {
-        GL20.nglVertexAttrib3dv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib3dv(int index, DoubleBuffer v) {
         GL20.glVertexAttrib3dv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4fv(int index, long v) {
-        GL20.nglVertexAttrib4fv(index, v);
     }
 
     @Override
@@ -562,18 +402,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4sv(int index, long v) {
-        GL20.nglVertexAttrib4sv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4sv(int index, ShortBuffer v) {
         GL20.glVertexAttrib4sv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4dv(int index, long v) {
-        GL20.nglVertexAttrib4dv(index, v);
     }
 
     @Override
@@ -582,18 +412,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4iv(int index, long v) {
-        GL20.nglVertexAttrib4iv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4iv(int index, IntBuffer v) {
         GL20.glVertexAttrib4iv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4bv(int index, long v) {
-        GL20.nglVertexAttrib4bv(index, v);
     }
 
     @Override
@@ -602,18 +422,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4ubv(int index, long v) {
-        GL20.nglVertexAttrib4ubv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4ubv(int index, ByteBuffer v) {
         GL20.glVertexAttrib4ubv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4usv(int index, long v) {
-        GL20.nglVertexAttrib4usv(index, v);
     }
 
     @Override
@@ -622,18 +432,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4uiv(int index, long v) {
-        GL20.nglVertexAttrib4uiv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4uiv(int index, IntBuffer v) {
         GL20.glVertexAttrib4uiv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4Nbv(int index, long v) {
-        GL20.nglVertexAttrib4Nbv(index, v);
     }
 
     @Override
@@ -642,18 +442,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4Nsv(int index, long v) {
-        GL20.nglVertexAttrib4Nsv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4Nsv(int index, ShortBuffer v) {
         GL20.glVertexAttrib4Nsv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4Niv(int index, long v) {
-        GL20.nglVertexAttrib4Niv(index, v);
     }
 
     @Override
@@ -662,18 +452,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4Nubv(int index, long v) {
-        GL20.nglVertexAttrib4Nubv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4Nubv(int index, ByteBuffer v) {
         GL20.glVertexAttrib4Nubv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttrib4Nusv(int index, long v) {
-        GL20.nglVertexAttrib4Nusv(index, v);
     }
 
     @Override
@@ -682,18 +462,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglVertexAttrib4Nuiv(int index, long v) {
-        GL20.nglVertexAttrib4Nuiv(index, v);
-    }
-
-    @Override
     public void glVertexAttrib4Nuiv(int index, IntBuffer v) {
         GL20.glVertexAttrib4Nuiv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, long pointer) {
-        GL20.nglVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
     @Override
@@ -732,11 +502,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglBindAttribLocation(int program, int index, long name) {
-        GL20.nglBindAttribLocation(program, index, name);
-    }
-
-    @Override
     public void glBindAttribLocation(int program, int index, ByteBuffer name) {
         GL20.glBindAttribLocation(program, index, name);
     }
@@ -744,11 +509,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     @Override
     public void glBindAttribLocation(int program, int index, CharSequence name) {
         GL20.glBindAttribLocation(program, index, name);
-    }
-
-    @Override
-    public void nglGetActiveAttrib(int program, int index, int maxLength, long length, long size, long type, long name) {
-        GL20.nglGetActiveAttrib(program, index, maxLength, length, size, type, name);
     }
 
     @Override
@@ -767,11 +527,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public int nglGetAttribLocation(int program, long name) {
-        return GL20.nglGetAttribLocation(program, name);
-    }
-
-    @Override
     public int glGetAttribLocation(int program, ByteBuffer name) {
         return GL20.glGetAttribLocation(program, name);
     }
@@ -779,11 +534,6 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     @Override
     public int glGetAttribLocation(int program, CharSequence name) {
         return GL20.glGetAttribLocation(program, name);
-    }
-
-    @Override
-    public void nglGetVertexAttribiv(int index, int pname, long params) {
-        GL20.nglGetVertexAttribiv(index, pname, params);
     }
 
     @Override
@@ -797,18 +547,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetVertexAttribfv(int index, int pname, long params) {
-        GL20.nglGetVertexAttribfv(index, pname, params);
-    }
-
-    @Override
     public void glGetVertexAttribfv(int index, int pname, FloatBuffer params) {
         GL20.glGetVertexAttribfv(index, pname, params);
-    }
-
-    @Override
-    public void nglGetVertexAttribdv(int index, int pname, long params) {
-        GL20.nglGetVertexAttribdv(index, pname, params);
     }
 
     @Override
@@ -817,18 +557,8 @@ public class LwjglGL20 extends LwjglGL15 implements GLI20 {
     }
 
     @Override
-    public void nglGetVertexAttribPointerv(int index, int pname, long pointer) {
-        GL20.nglGetVertexAttribPointerv(index, pname, pointer);
-    }
-
-    @Override
     public long glGetVertexAttribPointer(int index, int pname) {
         return GL20.glGetVertexAttribPointer(index, pname);
-    }
-
-    @Override
-    public void nglDrawBuffers(int n, long bufs) {
-        GL20.nglDrawBuffers(n, bufs);
     }
 
     @Override

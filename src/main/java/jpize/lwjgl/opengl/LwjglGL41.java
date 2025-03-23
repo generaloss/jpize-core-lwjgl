@@ -12,18 +12,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglShaderBinary(int count, long shaders, int binaryformat, long binary, int length) {
-        GL41.nglShaderBinary(count, shaders, binaryformat, binary, length);
-    }
-
-    @Override
     public void glShaderBinary(IntBuffer shaders, int binaryformat, ByteBuffer binary) {
         GL41.glShaderBinary(shaders, binaryformat, binary);
-    }
-
-    @Override
-    public void nglGetShaderPrecisionFormat(int shadertype, int precisiontype, long range, long precision) {
-        GL41.nglGetShaderPrecisionFormat(shadertype, precisiontype, range, precision);
     }
 
     @Override
@@ -47,18 +37,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglGetProgramBinary(int program, int bufSize, long length, long binaryFormat, long binary) {
-        GL41.nglGetProgramBinary(program, bufSize, length, binaryFormat, binary);
-    }
-
-    @Override
     public void glGetProgramBinary(int program, IntBuffer length, IntBuffer binaryFormat, ByteBuffer binary) {
         GL41.glGetProgramBinary(program, length, binaryFormat, binary);
-    }
-
-    @Override
-    public void nglProgramBinary(int program, int binaryFormat, long binary, int length) {
-        GL41.nglProgramBinary(program, binaryFormat, binary, length);
     }
 
     @Override
@@ -82,11 +62,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public int nglCreateShaderProgramv(int type, int count, long strings) {
-        return GL41.nglCreateShaderProgramv(type, count, strings);
-    }
-
-    @Override
     public int glCreateShaderProgramv(int type, CharSequence... strings) {
         return GL41.glCreateShaderProgramv(type, strings);
     }
@@ -102,11 +77,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglDeleteProgramPipelines(int n, long pipelines) {
-        GL41.nglDeleteProgramPipelines(n, pipelines);
-    }
-
-    @Override
     public void glDeleteProgramPipelines(IntBuffer pipelines) {
         GL41.glDeleteProgramPipelines(pipelines);
     }
@@ -114,11 +84,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     @Override
     public void glDeleteProgramPipelines(int pipeline) {
         GL41.glDeleteProgramPipelines(pipeline);
-    }
-
-    @Override
-    public void nglGenProgramPipelines(int n, long pipelines) {
-        GL41.nglGenProgramPipelines(n, pipelines);
     }
 
     @Override
@@ -134,11 +99,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     @Override
     public boolean glIsProgramPipeline(int pipeline) {
         return GL41.glIsProgramPipeline(pipeline);
-    }
-
-    @Override
-    public void nglGetProgramPipelineiv(int pipeline, int pname, long params) {
-        GL41.nglGetProgramPipelineiv(pipeline, pname, params);
     }
 
     @Override
@@ -232,18 +192,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform1iv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform1iv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform1iv(int program, int location, IntBuffer value) {
         GL41.glProgramUniform1iv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform2iv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform2iv(program, location, count, value);
     }
 
     @Override
@@ -252,18 +202,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform3iv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform3iv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform3iv(int program, int location, IntBuffer value) {
         GL41.glProgramUniform3iv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform4iv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform4iv(program, location, count, value);
     }
 
     @Override
@@ -272,18 +212,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform1uiv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform1uiv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform1uiv(int program, int location, IntBuffer value) {
         GL41.glProgramUniform1uiv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform2uiv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform2uiv(program, location, count, value);
     }
 
     @Override
@@ -292,18 +222,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform3uiv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform3uiv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform3uiv(int program, int location, IntBuffer value) {
         GL41.glProgramUniform3uiv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform4uiv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform4uiv(program, location, count, value);
     }
 
     @Override
@@ -312,18 +232,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform1fv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform1fv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform1fv(int program, int location, FloatBuffer value) {
         GL41.glProgramUniform1fv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform2fv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform2fv(program, location, count, value);
     }
 
     @Override
@@ -332,18 +242,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform3fv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform3fv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform3fv(int program, int location, FloatBuffer value) {
         GL41.glProgramUniform3fv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform4fv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform4fv(program, location, count, value);
     }
 
     @Override
@@ -352,18 +252,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform1dv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform1dv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform1dv(int program, int location, DoubleBuffer value) {
         GL41.glProgramUniform1dv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform2dv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform2dv(program, location, count, value);
     }
 
     @Override
@@ -372,18 +262,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniform3dv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform3dv(program, location, count, value);
-    }
-
-    @Override
     public void glProgramUniform3dv(int program, int location, DoubleBuffer value) {
         GL41.glProgramUniform3dv(program, location, value);
-    }
-
-    @Override
-    public void nglProgramUniform4dv(int program, int location, int count, long value) {
-        GL41.nglProgramUniform4dv(program, location, count, value);
     }
 
     @Override
@@ -392,18 +272,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix2fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix2fv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix2fv(int program, int location, boolean transpose, FloatBuffer value) {
         GL41.glProgramUniformMatrix2fv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix3fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix3fv(program, location, count, transpose, value);
     }
 
     @Override
@@ -412,18 +282,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix4fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix4fv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix4fv(int program, int location, boolean transpose, FloatBuffer value) {
         GL41.glProgramUniformMatrix4fv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix2dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix2dv(program, location, count, transpose, value);
     }
 
     @Override
@@ -432,18 +292,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix3dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix3dv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix3dv(int program, int location, boolean transpose, DoubleBuffer value) {
         GL41.glProgramUniformMatrix3dv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix4dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix4dv(program, location, count, transpose, value);
     }
 
     @Override
@@ -452,18 +302,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix2x3fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix2x3fv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix2x3fv(int program, int location, boolean transpose, FloatBuffer value) {
         GL41.glProgramUniformMatrix2x3fv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix3x2fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix3x2fv(program, location, count, transpose, value);
     }
 
     @Override
@@ -472,18 +312,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix2x4fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix2x4fv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix2x4fv(int program, int location, boolean transpose, FloatBuffer value) {
         GL41.glProgramUniformMatrix2x4fv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix4x2fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix4x2fv(program, location, count, transpose, value);
     }
 
     @Override
@@ -492,18 +322,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix3x4fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix3x4fv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix3x4fv(int program, int location, boolean transpose, FloatBuffer value) {
         GL41.glProgramUniformMatrix3x4fv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix4x3fv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix4x3fv(program, location, count, transpose, value);
     }
 
     @Override
@@ -512,18 +332,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix2x3dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix2x3dv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix2x3dv(int program, int location, boolean transpose, DoubleBuffer value) {
         GL41.glProgramUniformMatrix2x3dv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix3x2dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix3x2dv(program, location, count, transpose, value);
     }
 
     @Override
@@ -532,18 +342,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix2x4dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix2x4dv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix2x4dv(int program, int location, boolean transpose, DoubleBuffer value) {
         GL41.glProgramUniformMatrix2x4dv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix4x2dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix4x2dv(program, location, count, transpose, value);
     }
 
     @Override
@@ -552,18 +352,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglProgramUniformMatrix3x4dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix3x4dv(program, location, count, transpose, value);
-    }
-
-    @Override
     public void glProgramUniformMatrix3x4dv(int program, int location, boolean transpose, DoubleBuffer value) {
         GL41.glProgramUniformMatrix3x4dv(program, location, transpose, value);
-    }
-
-    @Override
-    public void nglProgramUniformMatrix4x3dv(int program, int location, int count, boolean transpose, long value) {
-        GL41.nglProgramUniformMatrix4x3dv(program, location, count, transpose, value);
     }
 
     @Override
@@ -574,11 +364,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     @Override
     public void glValidateProgramPipeline(int pipeline) {
         GL41.glValidateProgramPipeline(pipeline);
-    }
-
-    @Override
-    public void nglGetProgramPipelineInfoLog(int pipeline, int bufSize, long length, long infoLog) {
-        GL41.nglGetProgramPipelineInfoLog(pipeline, bufSize, length, infoLog);
     }
 
     @Override
@@ -617,18 +402,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglVertexAttribL1dv(int index, long v) {
-        GL41.nglVertexAttribL1dv(index, v);
-    }
-
-    @Override
     public void glVertexAttribL1dv(int index, DoubleBuffer v) {
         GL41.glVertexAttribL1dv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribL2dv(int index, long v) {
-        GL41.nglVertexAttribL2dv(index, v);
     }
 
     @Override
@@ -637,28 +412,13 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglVertexAttribL3dv(int index, long v) {
-        GL41.nglVertexAttribL3dv(index, v);
-    }
-
-    @Override
     public void glVertexAttribL3dv(int index, DoubleBuffer v) {
         GL41.glVertexAttribL3dv(index, v);
     }
 
     @Override
-    public void nglVertexAttribL4dv(int index, long v) {
-        GL41.nglVertexAttribL4dv(index, v);
-    }
-
-    @Override
     public void glVertexAttribL4dv(int index, DoubleBuffer v) {
         GL41.glVertexAttribL4dv(index, v);
-    }
-
-    @Override
-    public void nglVertexAttribLPointer(int index, int size, int type, int stride, long pointer) {
-        GL41.nglVertexAttribLPointer(index, size, type, stride, pointer);
     }
 
     @Override
@@ -677,18 +437,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglGetVertexAttribLdv(int index, int pname, long params) {
-        GL41.nglGetVertexAttribLdv(index, pname, params);
-    }
-
-    @Override
     public void glGetVertexAttribLdv(int index, int pname, DoubleBuffer params) {
         GL41.glGetVertexAttribLdv(index, pname, params);
-    }
-
-    @Override
-    public void nglViewportArrayv(int first, int count, long v) {
-        GL41.nglViewportArrayv(first, count, v);
     }
 
     @Override
@@ -702,18 +452,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglViewportIndexedfv(int index, long v) {
-        GL41.nglViewportIndexedfv(index, v);
-    }
-
-    @Override
     public void glViewportIndexedfv(int index, FloatBuffer v) {
         GL41.glViewportIndexedfv(index, v);
-    }
-
-    @Override
-    public void nglScissorArrayv(int first, int count, long v) {
-        GL41.nglScissorArrayv(first, count, v);
     }
 
     @Override
@@ -727,18 +467,8 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglScissorIndexedv(int index, long v) {
-        GL41.nglScissorIndexedv(index, v);
-    }
-
-    @Override
     public void glScissorIndexedv(int index, IntBuffer v) {
         GL41.glScissorIndexedv(index, v);
-    }
-
-    @Override
-    public void nglDepthRangeArrayv(int first, int count, long v) {
-        GL41.nglDepthRangeArrayv(first, count, v);
     }
 
     @Override
@@ -752,11 +482,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     }
 
     @Override
-    public void nglGetFloati_v(int target, int index, long data) {
-        GL41.nglGetFloati_v(target, index, data);
-    }
-
-    @Override
     public void glGetFloati_v(int target, int index, FloatBuffer data) {
         GL41.glGetFloati_v(target, index, data);
     }
@@ -764,11 +489,6 @@ public class LwjglGL41 extends LwjglGL40 implements GLI41 {
     @Override
     public float glGetFloati(int target, int index) {
         return GL41.glGetFloati(target, index);
-    }
-
-    @Override
-    public void nglGetDoublei_v(int target, int index, long data) {
-        GL41.nglGetDoublei_v(target, index, data);
     }
 
     @Override
